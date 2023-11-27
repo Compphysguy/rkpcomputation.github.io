@@ -124,14 +124,16 @@
     </div>
 
     <!-- Footer -->
-    <footer class="sticky-bottom mt-5">
-        <div class="container">
-            © Copyright 2023 Raj Kumar Paudel. Powered by <a href="https://jekyllrb.com/" target="_blank" rel="noopener noreferrer">Jekyll</a> with
-            <a href="https://github.com/alshedivat/al-folio" target="_blank" rel="noopener noreferrer">al-folio</a> theme. Hosted by
-            <a href="https://pages.github.com/" target="_blank" rel="noopener noreferrer">GitHub Pages</a>.
-            Last updated: July 27, 2023.
-        </div>
-    </footer>
+<!-- Last updated date -->
+<p>Last updated: <span id="lastUpdated"></span></p>
+
+<script>
+document.getElementById('lastUpdated').textContent = new Date().toLocaleDateString('en-US', {
+    year: 'numeric',
+    month: 'short',
+    day: 'numeric'
+});
+</script>
 
     <!-- JavaScript Libraries -->
     <script src="/assets/js/jquery.min.js" integrity="sha512-bLT0Qm9VnAYZDflyKcBaQ2gg0hSYNQrJ8RilYldYQ1FxQYoCLtUjuuRuZo+fjqhx/qtq/1itJ0C2ejDxltZVFg==" crossorigin="anonymous"></script>
