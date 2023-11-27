@@ -388,18 +388,22 @@ rel="noopener noreferrer">Twitter</a> | <a href="https://drive.google.com/file/d
 
     </div>
 
-<!-- Footer Section -->
-<footer style="text-align: center; background-color: rgba(0, 0, 0, 0.05); border-top: 1px solid rgba(0, 0, 0, 0.1); padding: 10px;">
-  <p>&copy; Copyright 2023 Raj Kumar Paudel. Powered by Jekyll with al-folio theme. Hosted by GitHub Pages. Last updated: <span id="lastUpdated"></span></p>
+<!-- Footer -->
+<footer class="sticky-bottom mt-5">
+  <div class="container">
+    © Copyright 2023 Raj Kumar Paudel.
+    Powered by <a href="https://jekyllrb.com/" target="_blank" rel="noopener noreferrer">Jekyll</a> with <a href="https://github.com/alshedivat/al-folio" target="_blank" rel="noopener noreferrer">al-folio</a> theme. Hosted by <a href="https://pages.github.com/" target="_blank" rel="noopener noreferrer">GitHub Pages</a>.
+    Last updated: <span id="lastUpdated"></span>.
+  </div>
 </footer>
 
 <!-- JavaScript to dynamically set last updated date -->
 <script>
-document.getElementById('lastUpdated').textContent = new Date().toLocaleDateString('en-US', {
-  year: 'numeric',
-  month: 'short',
-  day: 'numeric'
-});
+  document.getElementById('lastUpdated').textContent = new Date().toLocaleDateString('en-US', {
+    year: 'numeric',
+    month: 'short',
+    day: 'numeric'
+  });
 </script>
 
 
