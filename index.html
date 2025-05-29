@@ -7,21 +7,187 @@
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <title>Dr. Raj Kumar Paudel | Computational Physicist</title>
   <meta name="description" content="Postdoctoral Research Fellow in Computational Condensed Matter Physics at Academia Sinica">
+  
+  <!-- Bootstrap and MDB CSS -->
   <link href="/assets/css/bootstrap.min.css" rel="stylesheet">
   <link rel="stylesheet" href="/assets/css/mdb.min.css">
-  <link rel="stylesheet" href="/assets/css/all.min.css">
+  
+  <!-- Font Awesome and Academicons -->
+  <link rel="stylesheet" href="/assets/css/all.min.css"> <!-- Assuming this is Font Awesome -->
   <link rel="stylesheet" href="/assets/css/academicons.min.css">
+  
+  <!-- Google Fonts -->
   <link rel="stylesheet" type="text/css"
     href="https://fonts.googleapis.com/css?family=Roboto:300,400,500,700|Roboto+Slab:100,300,400,500,700|Material+Icons">
+  
+  <!-- Favicon -->
   <link rel="icon"
     href="data:image/svg+xml,<svg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 100 100%22><text y=%22.9em%22 font-size=%2290%22>🔬</text></svg>">
-  <link rel="stylesheet" href="/assets/css/main.css">
+  
+  <!-- Main Custom CSS (if you have one, otherwise styles below are primary) -->
+  <link rel="stylesheet" href="/assets/css/main.css"> 
+  
   <link rel="canonical" href="https://rkpcomputation.github.io/">
+
+  <style>
+    /* Custom Navbar Toggle Icon (from previous examples) */
+    .icon-bar {
+      display: block;
+      width: 22px;
+      height: 2px;
+      border-radius: 1px;
+      background-color: #333; /* Default icon color */
+      margin: 4px auto;
+      transition: all 0.3s ease-in-out;
+    }
+    .navbar-light .navbar-toggler .icon-bar {
+      background-color: rgba(0, 0, 0, 0.5);
+    }
+    .navbar-toggler:not(.collapsed) .top-bar {
+      transform: translateY(6px) rotate(45deg);
+    }
+    .navbar-toggler:not(.collapsed) .middle-bar {
+      opacity: 0;
+      transform: scale(0);
+    }
+    .navbar-toggler:not(.collapsed) .bottom-bar {
+      transform: translateY(-6px) rotate(-45deg);
+    }
+
+    /* CSS for Profile Header (Image Left, Text Right) */
+    .profile-header-flex-container {
+      display: flex; 
+      align-items: flex-start; 
+      margin-bottom: 2rem; /* Added some space below the header */
+    }
+
+    .profile-image-container {
+      flex-shrink: 0; 
+      margin-right: 25px; /* Increased space a bit */
+    }
+
+    .profile-image-small {
+      width: 130px; /* Adjusted size slightly */
+      height: 130px; 
+      object-fit: cover; 
+      border-radius: 8px; 
+      border: 2px solid #ddd; /* Slightly darker border */
+    }
+    /* Uncomment for circular image */
+    /*
+    .profile-image-small {
+      border-radius: 50%;
+    }
+    */
+
+    .profile-text-container {
+      flex-grow: 1; 
+    }
+
+    .profile-text-container .post-title {
+      margin-top: 0; 
+      font-size: 2.2rem; /* Adjusted font size */
+      color: #333;
+    }
+    .profile-text-container .post-title .font-weight-bold {
+        font-weight: 500 !important; /* Roboto Slab often looks better at 500 for bold */
+    }
+
+
+    .profile-text-container .post-subtitle,
+    .profile-text-container .institution {
+      font-size: 1.15rem; 
+      margin-bottom: 0.6rem; 
+      color: #555;
+    }
+    .profile-text-container .institution {
+        font-size: 1.05rem;
+        color: #666;
+    }
+
+    .profile-text-container .social-icons {
+        margin-top: 10px; /* Added some top margin */
+    }
+    .profile-text-container .social-icons a {
+      margin-right: 12px; 
+      color: #4a4a4a; 
+      transition: color 0.2s ease-in-out;
+    }
+    .profile-text-container .social-icons a:hover {
+      color: #007bff; /* Example hover color */
+    }
+
+    .profile-text-container .social-icons a:last-child {
+      margin-right: 0;
+    }
+
+    /* Section Titles */
+    .section-title {
+        font-size: 1.75rem;
+        color: #333;
+        margin-bottom: 1rem;
+        border-bottom: 2px solid #007bff; /* Example accent color */
+        padding-bottom: 0.5rem;
+        display: inline-block; /* To make border only as wide as text */
+    }
+
+    /* Cards Styling */
+    .card {
+        border: 1px solid #e0e0e0;
+        box-shadow: 0 2px 5px rgba(0,0,0,0.05);
+    }
+    .card-title {
+        color: #0056b3; /* Darker blue for card titles */
+    }
+
+
+    /* Responsive adjustments for smaller screens */
+    @media (max-width: 767px) {
+      .profile-header-flex-container {
+        flex-direction: column; 
+        align-items: center; 
+        text-align: center; 
+      }
+
+      .profile-image-container {
+        margin-right: 0; 
+        margin-bottom: 20px; 
+      }
+
+      .profile-image-small {
+        width: 150px; 
+        height: 150px;
+      }
+
+      .profile-text-container .post-title {
+        font-size: 2rem;
+      }
+      .profile-text-container .social-icons {
+        justify-content: center; 
+        display: flex; 
+        flex-wrap: wrap; 
+      }
+       .section-title {
+        font-size: 1.5rem;
+        display: block; /* Make border full width on mobile */
+        text-align: center;
+      }
+    }
+
+    /* Footer basic styling */
+    footer.sticky-bottom {
+        padding-top: 1rem;
+        padding-bottom: 1rem;
+        background-color: #f8f9fa; /* Light background for footer */
+        font-size: 0.9rem;
+        border-top: 1px solid #e7e7e7;
+    }
+  </style>
 </head>
 
 <body class="fixed-top-nav sticky-bottom-footer">
   <header>
-    <nav id="navbar" class="navbar navbar-light navbar-expand-sm fixed-top">
+    <nav id="navbar" class="navbar navbar-light navbar-expand-sm fixed-top bg-white shadow-sm"> <!-- Added bg-white and shadow -->
       <div class="container">
         <a class="navbar-brand title font-weight-lighter" href="/">
           <span class="font-weight-bold">Dr. Raj</span> Kumar Paudel
@@ -46,20 +212,20 @@
     </nav>
   </header>
 
-  <div class="container mt-5 pt-5">
+  <div class="container mt-5 pt-5"> <!-- Ensure enough padding-top for fixed navbar -->
     <div class="post">
-      <!-- Single Profile Header Section -->
-      <header class="post-header text-center">
-        <div class="profile-wrapper">
-          <div class="profile-image">
-            <img class="img-fluid z-depth-1 rounded-circle" src="/assets/img/profile.png" alt="Dr. Raj Kumar Paudel">
+      <!-- Profile Header Section - Modified for Image Left, Text Right -->
+      <header class="post-header">
+        <div class="profile-header-flex-container">
+          <div class="profile-image-container">
+            <img class="profile-image-small" src="/assets/img/profile.png" alt="Dr. Raj Kumar Paudel">
           </div>
-          <div class="profile-text">
+          <div class="profile-text-container">
             <h1 class="post-title mb-1">
               <span class="font-weight-bold">Dr. Raj Kumar</span> Paudel
             </h1>
-            <p class="post-subtitle">Postdoctoral Research Fellow in Computational Physics</p>
-            <p class="institution">Research Center for Applied Sciences, Academia Sinica</p>
+            <p class="post-subtitle mb-2">Postdoctoral Research Fellow in Computational Physics</p>
+            <p class="institution mb-2">Research Center for Applied Sciences, Academia Sinica</p>
             
             <div class="social-icons">
               <a href="https://scholar.google.com/citations?hl=en&user=gvw7sG4AAAAJ" target="_blank" rel="noopener noreferrer" title="Google Scholar">
@@ -85,7 +251,7 @@
         </div>
       </header>
 
-      <div class="clearfix">
+      <div class="clearfix"> <!-- This might not be strictly necessary with modern CSS but harmless -->
         <!-- About Section -->
         <section class="about-section mt-4">
           <h2 class="section-title">About Me</h2>
@@ -165,9 +331,9 @@
     </div>
   </div>
 
-  <footer class="sticky-bottom mt-5">
+  <footer class="sticky-bottom mt-5 py-3"> <!-- Added py-3 for padding -->
     <div class="container text-center">
-      © 2025 Dr. Raj Kumar Paudel. Powered by
+      © <span id="currentYearFooter"></span> Dr. Raj Kumar Paudel. Powered by
       <a href="https://jekyllrb.com/" target="_blank" rel="noopener noreferrer">Jekyll</a> and
       <a href="https://pages.github.com/" target="_blank" rel="noopener noreferrer">GitHub Pages</a>.
       Last updated: <span id="lastUpdated"></span>.
@@ -175,17 +341,21 @@
   </footer>
 
   <script>
-    document.getElementById('lastUpdated').textContent = new Date().toLocaleDateString('en-TW', {
+    document.getElementById('lastUpdated').textContent = new Date().toLocaleDateString('en-US', { // Changed to en-US for wider compatibility, adjust as needed
       year: 'numeric',
-      month: 'short',
+      month: 'long', // Changed to long for full month name
       day: 'numeric'
     });
+    document.getElementById('currentYearFooter').textContent = new Date().getFullYear();
   </script>
 
+  <!-- Local JS files (ensure these paths are correct) -->
   <script src="/assets/js/jquery.min.js"></script>
   <script src="/assets/js/popper.min.js"></script>
   <script src="/assets/js/bootstrap.min.js"></script>
   <script src="/assets/js/mdb.min.js"></script>
-</body>
+  <!-- If you have a common.js or other custom scripts, link them here -->
+  <!-- <script src="/assets/js/common.js"></script> -->
 
+</body>
 </html>
