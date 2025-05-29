@@ -57,9 +57,9 @@
     <div class="post">
       <header class="post-header">
         <div class="row align-items-center">
-          <div class="col-md-3">
+          <div class="col-md-3 text-center">
             <div class="profile">
-              <img class="img-fluid z-depth-1 rounded-circle" src="/assets/img/profile.png" alt="Profile image">
+              <img class="img-fluid z-depth-1 rounded-circle" src="/assets/img/profile.png" alt="Profile image" style="width: 200px; height: 200px;">
             </div>
           </div>
           <div class="col-md-9">
@@ -67,12 +67,11 @@
               <span class="font-weight-bold">Dr. Your</span> Name
             </h1>
             <p class="post-subtitle">Postdoctoral Research Fellow in Computational Physics</p>
-            
             <div class="social-icons">
               <a href="https://scholar.google.com/citations?hl=en&user=gvw7sG4AAAAJ" target="_blank" rel="noopener noreferrer" title="Google Scholar">
                 <i class="ai ai-google-scholar ai-2x"></i>
               </a>
-              <a href="https://orcid.org/my-orcid?orcid=0000-0003-2066-7032" target="_blank" rel="noopener noreferrer" title="ORCID">
+              <a href="https://orcid.org/0000-0003-2066-7032" target="_blank" rel="noopener noreferrer" title="ORCID">
                 <i class="ai ai-orcid ai-2x"></i>
               </a>
               <a href="https://github.com/Compphysguy" target="_blank" rel="noopener noreferrer" title="GitHub">
@@ -96,14 +95,7 @@
         <section class="about-section">
           <h2 class="section-title">About Me</h2>
           <p>
-            I am a Postdoctoral Research Fellow at Academia Sinica's Research Center for Applied Sciences, specializing in computational condensed matter physics. My work bridges theoretical modeling with practical applications in novel materials.
-          </p>
-          
-          <p>
-            <strong>Education:</strong><br>
-            Ph.D. in Physics, National Taiwan University (2015-2020)<br>
-            M.S. in Physics, National Tsing Hua University (2013-2015)<br>
-            B.S. in Physics, National Central University (2009-2013)
+            I am a Postdoctoral Research Fellow at Academia Sinica's Research Center for Applied Sciences, specializing in computational condensed matter physics. My work bridges theoretical modeling with applications in novel quantum materials.
           </p>
         </section>
 
@@ -112,7 +104,6 @@
           <p>
             My research focuses on developing and applying computational methods to understand electronic and optical properties of quantum materials. Key areas include:
           </p>
-          
           <div class="row">
             <div class="col-md-6">
               <div class="card mb-3">
@@ -139,10 +130,6 @@
               </div>
             </div>
           </div>
-          
-          <p>
-            I collaborate with experimental groups to validate theoretical predictions and guide materials design. Current projects include exciton engineering in 2D heterostructures and electronic structure tuning in molecular crystals.
-          </p>
         </section>
 
         <section class="news-section mt-4">
@@ -154,7 +141,7 @@
             </li>
             <li>
               <span class="badge badge-primary">March 2025</span>
-              <p>Invited talk at APS March Meeting on our new SEPM developments.</p>
+              <p>Invited talk at APS March Meeting on new SEPM developments.</p>
             </li>
             <li>
               <span class="badge badge-primary">January 2025</span>
@@ -172,7 +159,6 @@
               <a href="#" class="btn btn-sm btn-outline-primary">PDF</a>
               <a href="#" class="btn btn-sm btn-outline-secondary">DOI</a>
             </div>
-            
             <div class="publication-item">
               <h5>SEPM for C₆₀ electronic structure</h5>
               <p class="authors">Your Name, Chung-Yuan Ren, et al. <em>Physical Review B</em> (2023)</p>
@@ -186,21 +172,23 @@
     </div>
   </div>
 
-  <!-- Footer -->
   <footer class="sticky-bottom mt-5">
     <div class="container text-center">
-      <div class="footer-links mb-2">
-        <a href="/privacy/">Privacy Policy</a> | 
-        <a href="/accessibility/">Accessibility</a> | 
-        <a href="/sitemap/">Sitemap</a>
-      </div>
-      <div>
-        © 2025 Dr. Your Name. Powered by
-        <a href="https://jekyllrb.com/" target="_blank" rel="noopener noreferrer">Jekyll</a> and
-        <a href="https://pages.github.com/" target="_blank" rel="noopener noreferrer">GitHub Pages</a>.
-        Last updated: <span id="lastUpdated"></span>.
-      </div>
+      © 2025 Dr. Your Name. Powered by <a href="https://jekyllrb.com/" target="_blank" rel="noopener noreferrer">Jekyll</a> and <a href="https://pages.github.com/" target="_blank" rel="noopener noreferrer">GitHub Pages</a>. Last updated: <span id="lastUpdated"></span>.
     </div>
   </footer>
 
-  <!--
+  <script>
+    document.getElementById('lastUpdated').textContent = new Date().toLocaleDateString('en-TW', {
+      year: 'numeric', month: 'short', day: 'numeric'
+    });
+  </script>
+
+  <script src="/assets/js/jquery.min.js"></script>
+  <script src="/assets/js/popper.min.js"></script>
+  <script src="/assets/js/bootstrap.min.js"></script>
+  <script src="/assets/js/mdb.min.js"></script>
+</body>
+
+</html>
+
