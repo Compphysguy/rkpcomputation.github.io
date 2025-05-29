@@ -6,27 +6,28 @@
   <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <title>Dr. Raj Kumar Paudel | Computational Physicist</title>
-  <meta name="description" content="Postdoctoral Research Fellow in Computational Condensed Matter Physics at Academia Sinica">
-  
+  <meta name="description"
+    content="Postdoctoral Research Fellow in Computational Condensed Matter Physics at Academia Sinica">
+
   <!-- Bootstrap and MDB CSS -->
   <link href="/assets/css/bootstrap.min.css" rel="stylesheet">
   <link rel="stylesheet" href="/assets/css/mdb.min.css">
-  
+
   <!-- Font Awesome and Academicons -->
   <link rel="stylesheet" href="/assets/css/all.min.css"> <!-- Assuming this is Font Awesome -->
   <link rel="stylesheet" href="/assets/css/academicons.min.css">
-  
+
   <!-- Google Fonts -->
   <link rel="stylesheet" type="text/css"
     href="https://fonts.googleapis.com/css?family=Roboto:300,400,500,700|Roboto+Slab:100,300,400,500,700|Material+Icons">
-  
+
   <!-- Favicon -->
   <link rel="icon"
     href="data:image/svg+xml,<svg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 100 100%22><text y=%22.9em%22 font-size=%2290%22>🔬</text></svg>">
-  
+
   <!-- Main Custom CSS (if you have one, otherwise styles below are primary) -->
-  <link rel="stylesheet" href="/assets/css/main.css"> 
-  
+  <link rel="stylesheet" href="/assets/css/main.css">
+
   <link rel="canonical" href="https://rkpcomputation.github.io/">
 
   <style>
@@ -36,43 +37,52 @@
       width: 22px;
       height: 2px;
       border-radius: 1px;
-      background-color: #333; /* Default icon color */
+      background-color: #333;
+      /* Default icon color */
       margin: 4px auto;
       transition: all 0.3s ease-in-out;
     }
+
     .navbar-light .navbar-toggler .icon-bar {
       background-color: rgba(0, 0, 0, 0.5);
     }
+
     .navbar-toggler:not(.collapsed) .top-bar {
       transform: translateY(6px) rotate(45deg);
     }
+
     .navbar-toggler:not(.collapsed) .middle-bar {
       opacity: 0;
       transform: scale(0);
     }
+
     .navbar-toggler:not(.collapsed) .bottom-bar {
       transform: translateY(-6px) rotate(-45deg);
     }
 
     /* CSS for Profile Header (Image Left, Text Right) */
     .profile-header-flex-container {
-      display: flex; 
-      align-items: flex-start; 
-      margin-bottom: 2rem; /* Added some space below the header */
+      display: flex;
+      align-items: flex-start;
+      margin-bottom: 2rem;
+      /* Added some space below the header */
     }
 
     .profile-image-container {
-      flex-shrink: 0; 
-      margin-right: 25px; /* Increased space a bit */
+      flex-shrink: 0;
+      margin-right: 25px;
+      /* Increased space a bit */
     }
 
     .profile-image-small {
-      width: 130px; /* Adjusted size slightly */
-      height: 130px; 
-      object-fit: cover; 
-      border-radius: 8px; 
-      border: 2px solid #ddd; /* Slightly darker border */
+      width: 130px;
+      height: 130px;
+      object-fit: cover;
+      border-radius: 50%;
+      /* Circular image */
+      border: 2px solid #ddd;
     }
+
     /* Uncomment for circular image */
     /*
     .profile-image-small {
@@ -81,40 +91,48 @@
     */
 
     .profile-text-container {
-      flex-grow: 1; 
+      flex-grow: 1;
     }
 
     .profile-text-container .post-title {
-      margin-top: 0; 
-      font-size: 2.2rem; /* Adjusted font size */
+      margin-top: 0;
+      font-size: 2.2rem;
+      /* Adjusted font size */
       color: #333;
     }
+
     .profile-text-container .post-title .font-weight-bold {
-        font-weight: 500 !important; /* Roboto Slab often looks better at 500 for bold */
+      font-weight: 500 !important;
+      /* Roboto Slab often looks better at 500 for bold */
     }
 
 
     .profile-text-container .post-subtitle,
     .profile-text-container .institution {
-      font-size: 1.15rem; 
-      margin-bottom: 0.6rem; 
+      font-size: 1.15rem;
+      margin-bottom: 0.6rem;
       color: #555;
     }
+
     .profile-text-container .institution {
-        font-size: 1.05rem;
-        color: #666;
+      font-size: 1.05rem;
+      color: #666;
     }
 
     .profile-text-container .social-icons {
-        margin-top: 10px; /* Added some top margin */
+      margin-top: 10px;
+      /* Added some top margin */
     }
+
     .profile-text-container .social-icons a {
-      margin-right: 12px; 
-      color: #4a4a4a; 
+      margin-right: 12px;
+      color: #4a4a4a;
       transition: color 0.2s ease-in-out;
     }
+
     .profile-text-container .social-icons a:hover {
-      color: #007bff; /* Example hover color */
+      color: #007bff;
+      /* Example hover color */
     }
 
     .profile-text-container .social-icons a:last-child {
@@ -123,71 +141,80 @@
 
     /* Section Titles */
     .section-title {
-        font-size: 1.75rem;
-        color: #333;
-        margin-bottom: 1rem;
-        border-bottom: 2px solid #007bff; /* Example accent color */
-        padding-bottom: 0.5rem;
-        display: inline-block; /* To make border only as wide as text */
+      font-size: 1.75rem;
+      color: #333;
+      margin-bottom: 1rem;
+      border-bottom: 2px solid #007bff;
+      /* Example accent color */
+      padding-bottom: 0.5rem;
+      display: inline-block;
+      /* To make border only as wide as text */
     }
 
     /* Cards Styling */
     .card {
-        border: 1px solid #e0e0e0;
-        box-shadow: 0 2px 5px rgba(0,0,0,0.05);
+      border: 1px solid #e0e0e0;
+      box-shadow: 0 2px 5px rgba(0, 0, 0, 0.05);
     }
+
     .card-title {
-        color: #0056b3; /* Darker blue for card titles */
+      color: #0056b3;
+      /* Darker blue for card titles */
     }
 
 
     /* Responsive adjustments for smaller screens */
     @media (max-width: 767px) {
       .profile-header-flex-container {
-        flex-direction: column; 
-        align-items: center; 
-        text-align: center; 
+        flex-direction: column;
+        align-items: center;
+        text-align: center;
       }
 
       .profile-image-container {
-        margin-right: 0; 
-        margin-bottom: 20px; 
+        margin-right: 0;
+        margin-bottom: 20px;
       }
 
       .profile-image-small {
-        width: 150px; 
+        width: 150px;
         height: 150px;
       }
 
       .profile-text-container .post-title {
         font-size: 2rem;
       }
+
       .profile-text-container .social-icons {
-        justify-content: center; 
-        display: flex; 
-        flex-wrap: wrap; 
+        justify-content: center;
+        display: flex;
+        flex-wrap: wrap;
       }
-       .section-title {
+
+      .section-title {
         font-size: 1.5rem;
-        display: block; /* Make border full width on mobile */
+        display: block;
+        /* Make border full width on mobile */
         text-align: center;
       }
     }
 
     /* Footer basic styling */
     footer.sticky-bottom {
-        padding-top: 1rem;
-        padding-bottom: 1rem;
-        background-color: #f8f9fa; /* Light background for footer */
-        font-size: 0.9rem;
-        border-top: 1px solid #e7e7e7;
+      padding-top: 1rem;
+      padding-bottom: 1rem;
+      background-color: #f8f9fa;
+      /* Light background for footer */
+      font-size: 0.9rem;
+      border-top: 1px solid #e7e7e7;
     }
   </style>
 </head>
 
 <body class="fixed-top-nav sticky-bottom-footer">
   <header>
-    <nav id="navbar" class="navbar navbar-light navbar-expand-sm fixed-top bg-white shadow-sm"> <!-- Added bg-white and shadow -->
+    <nav id="navbar" class="navbar navbar-light navbar-expand-sm fixed-top bg-white shadow-sm">
+      <!-- Added bg-white and shadow -->
       <div class="container">
         <a class="navbar-brand title font-weight-lighter" href="/">
           <span class="font-weight-bold">Dr. Raj</span> Kumar Paudel
@@ -226,9 +253,10 @@
             </h1>
             <p class="post-subtitle mb-2">Postdoctoral Research Fellow in Computational Physics</p>
             <p class="institution mb-2">Research Center for Applied Sciences, Academia Sinica</p>
-            
+
             <div class="social-icons">
-              <a href="https://scholar.google.com/citations?hl=en&user=gvw7sG4AAAAJ" target="_blank" rel="noopener noreferrer" title="Google Scholar">
+              <a href="https://scholar.google.com/citations?hl=en&user=gvw7sG4AAAAJ" target="_blank"
+                rel="noopener noreferrer" title="Google Scholar">
                 <i class="ai ai-google-scholar ai-2x"></i>
               </a>
               <a href="https://orcid.org/0000-0003-2066-7032" target="_blank" rel="noopener noreferrer" title="ORCID">
@@ -237,7 +265,8 @@
               <a href="https://github.com/Compphysguy" target="_blank" rel="noopener noreferrer" title="GitHub">
                 <i class="fab fa-github fa-2x"></i>
               </a>
-              <a href="https://www.linkedin.com/in/raj-paudel-71029a88/" target="_blank" rel="noopener noreferrer" title="LinkedIn">
+              <a href="https://www.linkedin.com/in/raj-paudel-71029a88/" target="_blank" rel="noopener noreferrer"
+                title="LinkedIn">
                 <i class="fab fa-linkedin-in fa-2x"></i>
               </a>
               <a href="mailto:rajupdl6@gmail.com" title="Email">
@@ -256,10 +285,20 @@
         <section class="about-section mt-4">
           <h2 class="section-title">About Me</h2>
           <p>
-            I am a Postdoctoral Research Fellow at the Research Center for Applied Sciences, Academia Sinica, specializing in quantum mechanics-based computational methods including density functional theory (DFT) and semi-empirical pseudopotential methods (SEPM). My research bridges theoretical modeling with applications in novel quantum materials, focusing on their electronic and optical properties. I hold a PhD in Physics from the University of Texas at Austin, where I developed new computational methods for studying excitonic effects in two-dimensional materials.
-          </p>
-          <p>
-            Under the supervision of <a href="https://scholar.google.com/citations?hl=en&user=xSo-7YAAAAAJ" target="_blank">Prof. Yia-Chung Chang</a>, my current work focuses on developing advanced computational frameworks to understand and predict material properties at quantum scales, with particular emphasis on exciton physics in 2D systems and nanostructured materials.
+            I am currently a Postdoctoral Research Fellow at the Research Center for Applied Sciences, Academia Sinica.
+            My work focuses on quantum mechanics-based computational techniques, particularly density functional theory
+            (DFT) <br>
+            and the semi-empirical pseudopotential method (SEPM). I apply these methods to investigate the electronic
+            and optical properties of emerging quantum materials. I earned my Ph.D. in Physics through the Taiwan
+            International Graduate Program (TIGP) at Academia Sinica, in collaboration with National Central University.
+            <br>
+            Under the supervision of <a href="https://scholar.google.com/citations?hl=en&user=xSo-7YAAAAAJ"
+              target="_blank">Prof. Yia-Chung Chang</a>, <br>
+            During my doctoral studies, I studied novel computational approaches to explore electronic structure of
+            two-dimensional (2D) materials using Semi-Empirical Pseudopotential Method. <br>
+            my current work focuses on developing advanced computational frameworks to understand and predict material
+            properties at quantum scales, with particular emphasis on exciton physics in 2D systems and nanostructured
+            materials.
           </p>
         </section>
 
@@ -267,7 +306,8 @@
         <section class="research-section mt-4">
           <h2 class="section-title">Research Focus</h2>
           <p>
-            My research focuses on developing and applying computational methods to understand electronic and optical properties of quantum materials. Key areas include:
+            My research focuses on developing and applying computational methods to understand electronic and optical
+            properties of quantum materials. Key areas include:
           </p>
           <div class="row">
             <div class="col-md-6">
@@ -306,7 +346,8 @@
             <div class="card-body">
               <h5 class="card-title">Exciton Dynamics in 2D Materials</h5>
               <p class="card-text">
-                Developing theoretical frameworks to model exciton binding energies and dynamics in monolayer and twisted bilayer transition metal dichalcogenides (TMDCs) using advanced many-body approaches.
+                Developing theoretical frameworks to model exciton binding energies and dynamics in monolayer and
+                twisted bilayer transition metal dichalcogenides (TMDCs) using advanced many-body approaches.
               </p>
             </div>
           </div>
@@ -314,7 +355,8 @@
             <div class="card-body">
               <h5 class="card-title">Electronic Structure of Fullerene Systems</h5>
               <p class="card-text">
-                Investigating charge transfer mechanisms and electronic properties of C₆₀ molecular assemblies and solid-state configurations using DFT and SEPM approaches.
+                Investigating charge transfer mechanisms and electronic properties of C₆₀ molecular assemblies and
+                solid-state configurations using DFT and SEPM approaches.
               </p>
             </div>
           </div>
@@ -322,7 +364,8 @@
             <div class="card-body">
               <h5 class="card-title">TMDC-Graphene Heterostructures</h5>
               <p class="card-text">
-                Exploring quantum phenomena in moiré superlattices formed by stacking TMDCs with graphene layers, with focus on interlayer excitons and correlated electron states.
+                Exploring quantum phenomena in moiré superlattices formed by stacking TMDCs with graphene layers, with
+                focus on interlayer excitons and correlated electron states.
               </p>
             </div>
           </div>
@@ -358,4 +401,5 @@
   <!-- <script src="/assets/js/common.js"></script> -->
 
 </body>
+
 </html>
