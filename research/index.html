@@ -5,143 +5,628 @@
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
-  <title>Raj Kumar Paudel | Research</title>
-  <meta name="description" content="A simple, whitespace theme for academics. Based on [*folio](https://github.com/bogoli/-folio) design.">
-  <link href="/assets/css/bootstrap.min.css" rel="stylesheet">
-  <link rel="stylesheet" href="/assets/css/mdb.min.css">
-  <link rel="stylesheet" href="/assets/css/all.min.css">
-  <link rel="stylesheet" href="/assets/css/academicons.min.css">
+  <title>Raj Kumar Paudel | Computational Physics Research</title>
+  <meta name="description" content="Research in computational physics methods and exciton dynamics in quantum materials">
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/academicons/1.9.3/css/academicons.min.css">
   <link rel="stylesheet" type="text/css" href="https://fonts.googleapis.com/css?family=Roboto:300,400,500,700|Roboto+Slab:100,300,400,500,700|Material+Icons">
-  <link rel="icon" href="data:image/svg+xml,<svg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 100%22><text y=%22.9em%22 font-size=%2290%22>🔬</text></svg>"> <!-- Changed Favicon to match About page -->
-  <link rel="stylesheet" href="/assets/css/main.css">
-  <link rel="canonical" href="https://rkpcomputation.github.io/research/">
+  <link rel="icon" href="data:image/svg+xml,<svg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 100 100%22><text y=%22.9em%22 font-size=%2290%22>🔬</text></svg>">
   <style>
-    /* Custom Navbar Toggle Icon (Example, if not in main.css) */
-    .icon-bar {
+    :root {
+      --primary-color: #2c3e50;
+      --secondary-color: #3498db;
+      --accent-color: #e74c3c;
+      --light-bg: #f8f9fa;
+      --card-shadow: 0 4px 12px rgba(0,0,0,0.08);
+      --transition: all 0.3s ease;
+    }
+    
+    body {
+      font-family: 'Roboto', sans-serif;
+      color: #333;
+      background-color: #fff;
+      line-height: 1.6;
+    }
+    
+    .navbar {
+      background-color: white !important;
+      box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+      padding: 0.8rem 0;
+    }
+    
+    .navbar-brand {
+      font-weight: 500;
+      color: var(--primary-color) !important;
+    }
+    
+    .nav-link {
+      font-weight: 500;
+      color: #555 !important;
+      position: relative;
+      padding: 0.5rem 1rem !important;
+      transition: var(--transition);
+    }
+    
+    .nav-link:hover, .nav-link.active {
+      color: var(--secondary-color) !important;
+    }
+    
+    .nav-link.active:after {
+      content: '';
+      position: absolute;
+      bottom: 0;
+      left: 15%;
+      width: 70%;
+      height: 3px;
+      background-color: var(--secondary-color);
+      border-radius: 2px;
+    }
+    
+    .research-header {
+      background: linear-gradient(135deg, #1a2a6c, #2c3e50);
+      color: white;
+      padding: 5rem 0 4rem;
+      margin-bottom: 3rem;
+    }
+    
+    .section-title {
+      position: relative;
+      padding-bottom: 15px;
+      margin-bottom: 30px;
+      font-weight: 600;
+      color: var(--primary-color);
+    }
+    
+    .section-title:after {
+      content: '';
+      position: absolute;
+      bottom: 0;
+      left: 0;
+      width: 60px;
+      height: 4px;
+      background: var(--secondary-color);
+      border-radius: 2px;
+    }
+    
+    .research-card {
+      background: white;
+      border-radius: 10px;
+      overflow: hidden;
+      box-shadow: var(--card-shadow);
+      transition: var(--transition);
+      height: 100%;
+    }
+    
+    .research-card:hover {
+      transform: translateY(-8px);
+      box-shadow: 0 8px 20px rgba(0,0,0,0.12);
+    }
+    
+    .card-img-top {
+      height: 200px;
+      object-fit: cover;
+      border-bottom: 3px solid var(--secondary-color);
+    }
+    
+    .card-title {
+      font-weight: 600;
+      color: var(--primary-color);
+      margin-bottom: 15px;
+    }
+    
+    .card-body {
+      padding: 25px;
+    }
+    
+    .method-badge {
+      background: var(--secondary-color);
+      color: white;
+      padding: 5px 12px;
+      border-radius: 20px;
+      font-size: 0.85rem;
+      display: inline-block;
+      margin-bottom: 15px;
+    }
+    
+    .material-tabs {
+      margin-bottom: 30px;
+      border-bottom: 1px solid #eee;
+    }
+    
+    .nav-tabs .nav-link {
+      border: none;
+      border-radius: 0;
+      padding: 12px 20px;
+      color: #666;
+      font-weight: 500;
+    }
+    
+    .nav-tabs .nav-link.active {
+      color: var(--secondary-color);
+      border-bottom: 3px solid var(--secondary-color);
+    }
+    
+    .tab-content {
+      padding: 25px 0;
+    }
+    
+    .material-content {
+      background: white;
+      border-radius: 10px;
+      padding: 30px;
+      box-shadow: var(--card-shadow);
+    }
+    
+    .material-title {
+      font-weight: 600;
+      color: var(--primary-color);
+      margin-bottom: 20px;
+    }
+    
+    .material-figure {
+      border-radius: 8px;
+      overflow: hidden;
+      margin: 25px 0;
+      box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+    }
+    
+    .material-figure img {
+      width: 100%;
       display: block;
-      width: 22px;
-      height: 2px;
-      background-color: #333;
-      margin: 4px auto;
-      transition: all 0.3s ease;
     }
-    .navbar-light .navbar-toggler .icon-bar {
-      background-color: rgba(0,0,0,.5);
-    }
-    .navbar-toggler:not(.collapsed) .top-bar {
-      transform: translateY(6px) rotate(45deg);
-    }
-    .navbar-toggler:not(.collapsed) .middle-bar {
-      opacity: 0;
-    }
-    .navbar-toggler:not(.collapsed) .bottom-bar {
-      transform: translateY(-6px) rotate(-45deg);
-    }
-    /* Footer basic styling (consistent with About page) */
-    footer.sticky-bottom {
-      padding-top: 1rem;
-      padding-bottom: 1rem;
-      background-color: #f8f9fa; /* Light background for footer */
+    
+    .figure-caption {
+      background: var(--light-bg);
+      padding: 12px 15px;
       font-size: 0.9rem;
-      border-top: 1px solid #e7e7e7;
-      text-align: center;
+      color: #555;
     }
-     /* Ensure image styling from research page is maintained or adjusted */
-    article img {
-        display: block; /* Center images if they are block */
-        margin-left: auto;
-        margin-right: auto;
-        max-width: 85%; /* As per original styling */
-        height: auto; /* Maintain aspect ratio */
-        margin-top: 1rem;
-        margin-bottom: 1rem;
+    
+    .publication-highlight {
+      background: var(--light-bg);
+      border-left: 4px solid var(--secondary-color);
+      padding: 20px;
+      border-radius: 0 8px 8px 0;
+      margin: 30px 0;
+    }
+    
+    .future-work {
+      background: linear-gradient(135deg, #f5f7fa, #e4e7eb);
+      border-radius: 10px;
+      padding: 30px;
+      margin: 40px 0;
+    }
+    
+    .future-title {
+      color: var(--primary-color);
+      font-weight: 600;
+      margin-bottom: 20px;
+    }
+    
+    footer {
+      background: var(--primary-color);
+      color: rgba(255,255,255,0.8);
+      padding: 3rem 0 2rem;
+      margin-top: 4rem;
+    }
+    
+    .footer-title {
+      color: white;
+      font-weight: 500;
+      margin-bottom: 20px;
+    }
+    
+    .social-links a {
+      display: inline-block;
+      width: 40px;
+      height: 40px;
+      background: rgba(255,255,255,0.1);
+      border-radius: 50%;
+      text-align: center;
+      line-height: 40px;
+      color: white;
+      margin-right: 10px;
+      transition: var(--transition);
+    }
+    
+    .social-links a:hover {
+      background: var(--secondary-color);
+      transform: translateY(-3px);
+    }
+    
+    .footer-bottom {
+      border-top: 1px solid rgba(255,255,255,0.1);
+      padding-top: 20px;
+      margin-top: 30px;
+      font-size: 0.9rem;
+    }
+    
+    @media (max-width: 768px) {
+      .research-header {
+        padding: 4rem 0 3rem;
+      }
+      
+      .material-content {
+        padding: 20px;
+      }
     }
   </style>
 </head>
 
-<body class="fixed-top-nav sticky-bottom-footer">
-  <header>
-    <nav id="navbar" class="navbar navbar-light navbar-expand-sm fixed-top bg-white shadow-sm">
-      <div class="container">
-        <a class="navbar-brand title font-weight-lighter" href="/">
-          <span class="font-weight-bold"> Raj</span> Kumar Paudel
-        </a>
-        <button class="navbar-toggler collapsed ml-auto" type="button" data-toggle="collapse" data-target="#navbarNav"
-          aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
-          <span class="sr-only">Toggle navigation</span>
-          <span class="icon-bar top-bar"></span>
-          <span class="icon-bar middle-bar"></span>
-          <span class="icon-bar bottom-bar"></span>
+<body>
+  <!-- Navigation -->
+  <nav class="navbar navbar-expand-lg navbar-light sticky-top">
+    <div class="container">
+      <a class="navbar-brand" href="/">
+        <span class="fw-bold">Raj</span> Kumar Paudel
+      </a>
+      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <div class="collapse navbar-collapse" id="navbarNav">
+        <ul class="navbar-nav ms-auto">
+          <li class="nav-item"><a class="nav-link" href="/">About</a></li>
+          <li class="nav-item"><a class="nav-link" href="/publications/">Publications</a></li>
+          <li class="nav-item"><a class="nav-link active" href="/research/">Research</a></li>
+          <li class="nav-item"><a class="nav-link" href="/Blog/">Blog</a></li>
+          <li class="nav-item"><a class="nav-link" href="/Outreach/">Outreach</a></li>
+        </ul>
+      </div>
+    </div>
+  </nav>
+
+  <!-- Research Header -->
+  <header class="research-header">
+    <div class="container text-center">
+      <h1 class="display-4 fw-bold mb-3">Computational Physics Research</h1>
+      <p class="lead mb-4">Developing advanced computational methods to understand quantum materials</p>
+      <div class="d-flex justify-content-center gap-3">
+        <span class="badge bg-light text-dark fs-6 py-2 px-3">Semi-Empirical Pseudopotential Method</span>
+        <span class="badge bg-light text-dark fs-6 py-2 px-3">Exciton Dynamics</span>
+        <span class="badge bg-light text-dark fs-6 py-2 px-3">2D Materials</span>
+      </div>
+    </div>
+  </header>
+
+  <!-- Research Areas -->
+  <section class="container mb-5">
+    <div class="row g-4">
+      <!-- SEPM Card -->
+      <div class="col-lg-6">
+        <div class="research-card">
+          <div class="card-img-top" style="background: linear-gradient(45deg, #1a2a6c, #2c3e50);">
+            <div class="d-flex align-items-center justify-content-center h-100">
+              <i class="fas fa-atom display-1 text-white"></i>
+            </div>
+          </div>
+          <div class="card-body">
+            <span class="method-badge">Computational Method</span>
+            <h3 class="card-title">Semi-Empirical Pseudopotential Method</h3>
+            <p class="card-text">
+              We've developed a semi-empirical pseudopotential (SEPM) approach that efficiently calculates electronic structures 
+              of nanomaterials by combining plane waves with B-spline basis functions. This method is parameterized to accurately 
+              reproduce DFT results while being computationally efficient.
+            </p>
+            <ul class="list-group list-group-flush">
+              <li class="list-group-item border-0 ps-0">
+                <i class="fas fa-check-circle text-success me-2"></i>
+                Combines 2D plane waves with B-spline functions
+              </li>
+              <li class="list-group-item border-0 ps-0">
+                <i class="fas fa-check-circle text-success me-2"></i>
+                Incorporates local and non-local terms
+              </li>
+              <li class="list-group-item border-0 ps-0">
+                <i class="fas fa-check-circle text-success me-2"></i>
+                Parameterized using DFT benchmarks
+              </li>
+            </ul>
+          </div>
+        </div>
+      </div>
+      
+      <!-- Exciton Physics Card -->
+      <div class="col-lg-6">
+        <div class="research-card">
+          <div class="card-img-top" style="background: linear-gradient(45deg, #8E2DE2, #4A00E0);">
+            <div class="d-flex align-items-center justify-content-center h-100">
+              <i class="fas fa-lightbulb display-1 text-white"></i>
+            </div>
+          </div>
+          <div class="card-body">
+            <span class="method-badge">Quantum Phenomena</span>
+            <h3 class="card-title">Exciton Physics in 2D Materials</h3>
+            <p class="card-text">
+              Our research focuses on exciton binding energies and dynamics in transition metal dichalcogenides (TMDCs). 
+              We develop theoretical frameworks to model these quantum phenomena in monolayer, bilayer, and twisted bilayer systems.
+            </p>
+            <ul class="list-group list-group-flush">
+              <li class="list-group-item border-0 ps-0">
+                <i class="fas fa-check-circle text-success me-2"></i>
+                Exciton binding in monolayer and bilayer systems
+              </li>
+              <li class="list-group-item border-0 ps-0">
+                <i class="fas fa-check-circle text-success me-2"></i>
+                Charge transfer mechanisms in heterostructures
+              </li>
+              <li class="list-group-item border-0 ps-0">
+                <i class="fas fa-check-circle text-success me-2"></i>
+                Moiré superlattice effects on exciton dynamics
+              </li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Material Systems -->
+  <section class="container mb-5">
+    <h2 class="section-title">Material Systems</h2>
+    
+    <ul class="nav nav-tabs material-tabs" id="materialTabs" role="tablist">
+      <li class="nav-item" role="presentation">
+        <button class="nav-link active" id="graphene-tab" data-bs-toggle="tab" data-bs-target="#graphene" type="button" role="tab">
+          Graphene & Nanoribbons
         </button>
-        <div class="collapse navbar-collapse text-right" id="navbarNav">
-          <ul class="navbar-nav ml-auto flex-nowrap">
-            <li class="nav-item"><a class="nav-link" href="/">About</a></li>
-            <li class="nav-item"><a class="nav-link" href="/publications/">Publications</a></li>
-            <li class="nav-item active"><a class="nav-link" href="/research/">Research</a></li>
-            <li class="nav-item"><a class="nav-link" href="/Blog/">Blog</a></li>
-            <li class="nav-item"><a class="nav-link" href="/Outreach/">Outreach</a></li>
+      </li>
+      <li class="nav-item" role="presentation">
+        <button class="nav-link" id="tmdc-tab" data-bs-toggle="tab" data-bs-target="#tmdc" type="button" role="tab">
+          TMDCs (MoS₂, WSe₂)
+        </button>
+      </li>
+      <li class="nav-item" role="presentation">
+        <button class="nav-link" id="fullerene-tab" data-bs-toggle="tab" data-bs-target="#fullerene" type="button" role="tab">
+          Fullerenes (C₆₀)
+        </button>
+      </li>
+    </ul>
+    
+    <div class="tab-content" id="materialTabsContent">
+      <!-- Graphene Tab -->
+      <div class="tab-pane fade show active" id="graphene" role="tabpanel">
+        <div class="material-content">
+          <h3 class="material-title">Graphene and Nanoribbons</h3>
+          <p>
+            Our SEPM approach has been successfully applied to study the electronic properties of graphene and 
+            armchair graphene nanoribbons (aGNRs). The method accurately captures band structures and edge effects 
+            that are crucial for nanoscale electronic applications.
+          </p>
+          
+          <div class="row g-4">
+            <div class="col-md-6">
+              <div class="material-figure">
+                <div style="background: #e0e7ff; height: 200px; display: flex; align-items: center; justify-content: center;">
+                  <i class="fas fa-project-diagram fa-3x" style="color: #4f46e5;"></i>
+                </div>
+                <div class="figure-caption">
+                  <strong>Figure 1:</strong> SEPM procedure for graphene electronic structure calculation
+                </div>
+              </div>
+            </div>
+            <div class="col-md-6">
+              <div class="material-figure">
+                <div style="background: #dbeafe; height: 200px; display: flex; align-items: center; justify-content: center;">
+                  <i class="fas fa-wave-square fa-3x" style="color: #3b82f6;"></i>
+                </div>
+                <div class="figure-caption">
+                  <strong>Figure 2:</strong> Band structure of graphene using SEPM compared to DFT
+                </div>
+              </div>
+            </div>
+          </div>
+          
+          <div class="publication-highlight">
+            <h5><i class="fas fa-file-alt me-2"></i>Related Publication</h5>
+            <p class="mb-1"><strong>Paudel, R. K.</strong>, Ren, C. Y., & Chang, Y. C. (2023)</p>
+            <p class="mb-0">Semi-Empirical Pseudopotential Method for Graphene and Graphene Nanoribbons. <em>Nanomaterials</em></p>
+          </div>
+        </div>
+      </div>
+      
+      <!-- TMDC Tab -->
+      <div class="tab-pane fade" id="tmdc" role="tabpanel">
+        <div class="material-content">
+          <h3 class="material-title">Transition Metal Dichalcogenides</h3>
+          <p>
+            We apply our computational methods to study exciton dynamics in monolayer and bilayer TMDCs. 
+            Our work focuses on understanding how layer stacking and twist angles affect electronic and optical properties.
+          </p>
+          
+          <div class="material-figure">
+            <div style="background: #f0fdf4; height: 250px; display: flex; align-items: center; justify-content: center;">
+              <i class="fas fa-layer-group fa-3x" style="color: #10b981;"></i>
+            </div>
+            <div class="figure-caption">
+              <strong>Figure 3:</strong> Electronic structure fitting for WSe₂ using SEPM approach
+            </div>
+          </div>
+          
+          <p>
+            Recent work has explored interlayer excitons in bilayer systems and their behavior under electric fields, 
+            with implications for optoelectronic devices and quantum information applications.
+          </p>
+        </div>
+      </div>
+      
+      <!-- Fullerene Tab -->
+      <div class="tab-pane fade" id="fullerene" role="tabpanel">
+        <div class="material-content">
+          <h3 class="material-title">Fullerenes and Molecular Systems</h3>
+          <p>
+            We've extended our methods to study C₆₀ fullerene systems using symmetrized icosahedral basis functions. 
+            This approach efficiently captures the electronic properties of these symmetric molecular systems.
+          </p>
+          
+          <div class="row g-4">
+            <div class="col-md-6">
+              <div class="material-figure">
+                <div style="background: #fdf2f8; height: 200px; display: flex; align-items: center; justify-content: center;">
+                  <i class="fas fa-globe-americas fa-3x" style="color: #ec4899;"></i>
+                </div>
+                <div class="figure-caption">
+                  <strong>Figure 4:</strong> C₆₀ molecular structure with symmetry axes
+                </div>
+              </div>
+            </div>
+            <div class="col-md-6">
+              <div class="material-figure">
+                <div style="background: #fdf2f8; height: 200px; display: flex; align-items: center; justify-content: center;">
+                  <i class="fas fa-atom fa-3x" style="color: #ec4899;"></i>
+                </div>
+                <div class="figure-caption">
+                  <strong>Figure 5:</strong> Electronic states in C₆₀ assemblies
+                </div>
+              </div>
+            </div>
+          </div>
+          
+          <div class="publication-highlight">
+            <h5><i class="fas fa-file-alt me-2"></i>Related Publication</h5>
+            <p class="mb-1">Ren, C. Y., <strong>Paudel, R. K.</strong>, & Chang, Y. C. (2023)</p>
+            <p class="mb-0">Density Functional Theory for Buckyballs within Symmetrized Icosahedral Basis. <em>Nanomaterials</em></p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Future Research -->
+  <section class="container mb-5">
+    <div class="future-work">
+      <h3 class="future-title">Future Research Directions</h3>
+      <div class="row g-4">
+        <div class="col-md-6">
+          <div class="d-flex">
+            <div class="me-3">
+              <i class="fas fa-arrows-alt-h fa-2x text-primary"></i>
+            </div>
+            <div>
+              <h5>Moiré Superlattices</h5>
+              <p class="mb-0">
+                Developing methods to efficiently model vdW-induced moiré superlattice potentials 
+                in twisted bilayer systems at various angles.
+              </p>
+            </div>
+          </div>
+        </div>
+        <div class="col-md-6">
+          <div class="d-flex">
+            <div class="me-3">
+              <i class="fas fa-bolt fa-2x text-warning"></i>
+            </div>
+            <div>
+              <h5>Exciton Dynamics</h5>
+              <p class="mb-0">
+                Creating advanced frameworks to understand exciton formation and dissociation 
+                dynamics in 2D heterostructures under external fields.
+              </p>
+            </div>
+          </div>
+        </div>
+        <div class="col-md-6">
+          <div class="d-flex">
+            <div class="me-3">
+              <i class="fas fa-code fa-2x text-info"></i>
+            </div>
+            <div>
+              <h5>Method Integration</h5>
+              <p class="mb-0">
+                Combining SEPM with machine learning approaches to accelerate material discovery 
+                and property prediction.
+              </p>
+            </div>
+          </div>
+        </div>
+        <div class="col-md-6">
+          <div class="d-flex">
+            <div class="me-3">
+              <i class="fas fa-microscope fa-2x text-success"></i>
+            </div>
+            <div>
+              <h5>Experimental Collaboration</h5>
+              <p class="mb-0">
+                Working with experimental groups to validate computational predictions of 
+                exciton behavior in novel quantum materials.
+              </p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Footer -->
+  <footer>
+    <div class="container">
+      <div class="row g-4">
+        <div class="col-md-4">
+          <h5 class="footer-title">Raj Kumar Paudel</h5>
+          <p>Postdoctoral Research Fellow in Computational Condensed Matter Physics at Academia Sinica</p>
+          <div class="social-links mt-3">
+            <a href="https://scholar.google.com/citations?hl=en&user=gvw7sG4AAAAJ" target="_blank">
+              <i class="ai ai-google-scholar"></i>
+            </a>
+            <a href="https://orcid.org/0000-0003-2066-7032" target="_blank">
+              <i class="ai ai-orcid"></i>
+            </a>
+            <a href="https://github.com/Compphysguy" target="_blank">
+              <i class="fab fa-github"></i>
+            </a>
+            <a href="https://www.linkedin.com/in/raj-paudel-71029a88/" target="_blank">
+              <i class="fab fa-linkedin-in"></i>
+            </a>
+          </div>
+        </div>
+        <div class="col-md-4">
+          <h5 class="footer-title">Research Areas</h5>
+          <ul class="list-unstyled">
+            <li class="mb-2"><a href="#" class="text-white-50">Computational Physics</a></li>
+            <li class="mb-2"><a href="#" class="text-white-50">Quantum Materials</a></li>
+            <li class="mb-2"><a href="#" class="text-white-50">2D Materials</a></li>
+            <li class="mb-2"><a href="#" class="text-white-50">Exciton Physics</a></li>
+          </ul>
+        </div>
+        <div class="col-md-4">
+          <h5 class="footer-title">Contact</h5>
+          <ul class="list-unstyled">
+            <li class="mb-2">
+              <i class="fas fa-envelope me-2"></i>
+              <a href="mailto:rajupdl6@gmail.com" class="text-white-50">rajupdl6@gmail.com</a>
+            </li>
+            <li class="mb-2">
+              <i class="fas fa-map-marker-alt me-2"></i>
+              Research Center for Applied Sciences, Academia Sinica
+            </li>
           </ul>
         </div>
       </div>
-    </nav>
-  </header>
-
-  <div class="container mt-5 pt-5"> <!-- Added pt-5 for fixed-top navbar spacing -->
-    <div class="post">
-      <header class="post-header">
-        <h1 class="post-title">Research</h1>
-      </header>
-      <article>
-        <p>We have developed a semi-empirical pseudopotential (SEPM) method for efficiently calculating the electronic structures of graphene, armchair graphene nanoribbons (aGNRs), and monolayer transition metal dichalcogenides (TMDCs). Our approach combines the use of two-dimensional plane waves with B-spline functions along the perpendicular direction as basis functions. The SEPM method incorporates both local and non-local terms, which are parameterized to accurately reproduce relevant quantities obtained from density-functional theory (DFT) calculations. This is possible thanks also to our collaborator Prof. <a href="https://sso.nknu.edu.tw/DataOpen2Search/vita.aspx?UNID=3094&Lang=enUS#" target="_blank" rel="noopener noreferrer">Chung-Yuan Ren (NKNU)</a></p>
-        <p>Here are some materials that we currently employed our method on:</p>
-        <p><strong>Electronic Structure of Graphene</strong></p>
-        <div><img src="/assets/img/SEPMproced.png" alt="SEPM Procedure"></div>
-        <div><img src="/assets/img/graphene_bndstr.png" alt="Graphene Band Structure"></div>
-        <p><strong>Band Structure of armchair Graphene Nanoribbions(aGNRs)</strong></p>
-        <div><img src="/assets/img/agnr_strucfig8.png" alt="AGNR Structure"></div>
-        <div><img src="/assets/img/bndstructureAGNRDFTEPM.png" alt="AGNR Band Structure DFT EPM"></div>
-        <p><strong>Electronic Structure of monolayer TMDCs</strong></p>
-        <div><img src="/assets/img/FinalfittingWSE2.png" alt="WSe2 Fitting"></div>
-        <p><strong>Future extension of models</strong></p>
-        <p>Our First goal is to use planar-basis Density Functional Theory (DFT) calculations and utilize Semi-Empirical Pair-Potentials (SEPM) to accurately model the van der Waals (vdW) interactions within the bilayers of graphene and TMDCs. The formation of moiré superlattices arises from the lattice mismatch between the stacked layers of TMDCs, leading to periodic variations in the electronic potential. By efficiently calculating the vdW-induced moiré superlattice potential through SPEM pair-potentials, we can gain valuable insights into the band-edge profiles at different twist angles and explore the intriguing electronic phenomena in these systems.</p>
-      </article>
-    </div>
-  </div>
-
-  <footer class="sticky-bottom mt-5 py-3"> <!-- Standardized footer -->
-    <div class="container text-center">
-      © <span id="currentYearFooter"></span> Raj Kumar Paudel.
-      Powered by <a href="https://jekyllrb.com/" target="_blank" rel="noopener noreferrer">Jekyll</a> and
-      <a href="https://pages.github.com/" target="_blank" rel="noopener noreferrer">GitHub Pages</a>.
-      Last updated: <span id="lastUpdated"></span>.
+      
+      <div class="footer-bottom text-center">
+        <p class="mb-0">
+          © 2023 Raj Kumar Paudel. Powered by Jekyll and GitHub Pages.
+          <span class="d-block d-md-inline mt-2 mt-md-0">Last updated: July 27, 2023</span>
+        </p>
+      </div>
     </div>
   </footer>
-  
-  <script>
-    // Script for footer year and last updated date
-    if (document.getElementById('currentYearFooter')) {
-      document.getElementById('currentYearFooter').textContent = new Date().getFullYear();
-    }
-    if (document.getElementById('lastUpdated')) {
-       // You might want to set this date manually or use a build process to update it
-      document.getElementById('lastUpdated').textContent = new Date(document.lastModified).toLocaleDateString('en-US', {
-        year: 'numeric', month: 'long', day: 'numeric'
-      });
-    }
-  </script>
 
-  <script src="/assets/js/jquery.min.js"></script>
-  <script src="/assets/js/popper.min.js"></script>
-  <script src="/assets/js/bootstrap.min.js"></script>
-  <script src="/assets/js/mdb.min.js"></script>
-  <script src="https://cdn.jsdelivr.net/npm/medium-zoom@1.0.6/dist/medium-zoom.min.js"></script>
-  <script src="/assets/js/zoom.js"></script>
-  <!-- <script src="/assets/js/common.js"></script> --> <!-- Assuming common.js is needed -->
-  <script type="text/javascript">
-    window.MathJax = { tex: { tags: 'ams' } };
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.bundle.min.js"></script>
+  <script>
+    // Activate the first tab
+    document.addEventListener('DOMContentLoaded', function() {
+      const triggerTabList = [].slice.call(document.querySelectorAll('#materialTabs button'))
+      triggerTabList.forEach(function (triggerEl) {
+        const tabTrigger = new bootstrap.Tab(triggerEl)
+        
+        triggerEl.addEventListener('click', function (event) {
+          event.preventDefault()
+          tabTrigger.show()
+        })
+      })
+    });
   </script>
-  <script defer type="text/javascript" id="MathJax-script" src="https://cdn.jsdelivr.net/npm/mathjax@3.2.0/es5/tex-mml-chtml.js"></script>
-  <script defer src="https://polyfill.io/v3/polyfill.min.js?features=es6"></script>
 </body>
 
 </html>
