@@ -70,28 +70,34 @@
         display: block;
         margin-left: auto;
         margin-right: auto;
-        max-width: 85%;
+        max-width: 100%; /* Allow images to use full column width */
         height: auto;
         margin-top: 1rem;
         margin-bottom: 1rem;
-        border: 1px solid #ddd; /* Optional: add a light border to images */
-        padding: 5px; /* Optional: add some padding around images */
-        border-radius: 4px; /* Optional: rounded corners */
+        border: 1px solid #ddd;
+        padding: 5px;
+        border-radius: 4px;
     }
+    /* Specific max-width for normally sized images if needed, or rely on column width */
+    .img-standard-size {
+        max-width: 85%;
+    }
+
+
     .figure-caption {
         text-align: center;
         font-style: italic;
         color: #555;
         font-size: 0.9em;
-        margin-top: -0.5rem;
+        margin-top: -0.5rem; /* Adjusted from -0.5rem */
         margin-bottom: 1.5rem;
     }
-    .figure-container { /* To group image and caption, and allow centering */
-        text-align: center; /* Centers inline-block images if needed */
+    .figure-container {
+        text-align: center;
         margin-bottom: 1.5rem;
     }
     .figure-container img {
-        margin-bottom: 0.5rem; /* Space between image and caption */
+        margin-bottom: 0.5rem;
     }
 
 
@@ -128,9 +134,7 @@
             <li class="nav-item active"><a class="nav-link" href="/research/">Research</a></li>
             <li class="nav-item"><a class="nav-link" href="/Blog/">Blog</a></li>
             <li class="nav-item"><a class="nav-link" href="/Outreach/">Outreach</a></li>
-            <li class="nav-item">
-              <a class="nav-link" href="/assets/files/CV.pdf" target="_blank" rel="noopener noreferrer">CV</a>
-            </li>
+            <!-- CV link removed -->
           </ul>
         </div>
       </div>
@@ -164,19 +168,26 @@
             Details can be found in our publication: <a href="https://www.mdpi.com/2079-4991/13/14/2066" target="_blank" rel="noopener noreferrer">Semi-Empirical Pseudopotential Method for Graphene and Graphene Nanoribbons (MDPI Nanomaterials 2023)</a>.
           </p>
           <div class="row">
-            <div class="col-md-6">
+            <div class="col-md-8 offset-md-2"> <!-- Fig 1: Graphene band structure - made wider -->
                 <div class="figure-container">
                     <img src="/assets/img/graphene_bandstr.png" alt="Graphene Band Structure via SEPM">
                     <p class="figure-caption">Fig 1: Comparison of graphene band structure via SEPM (solid) and DFT (dashed).</p>
                 </div>
             </div>
-            <div class="col-md-6">
+          </div>
+          <div class="row mt-3"> <!-- Added margin top for spacing -->
+            <div class="col-md-6"> <!-- Fig 2: aGNR band structure - standard size -->
                 <div class="figure-container">
-                    <img src="/assets/img/bndstructureAGNRDFTEPM.png" alt="Armchair Graphene Nanoribbon Band Structure">
+                    <img src="/assets/img/bndstructureAGNRDFTEPM.png" alt="Armchair Graphene Nanoribbon Band Structure" class="img-standard-size">
                     <p class="figure-caption">Fig 2: Comparison of aGNR band structures from DFT (dashed) and SEPM (solid).</p>
                 </div>
             </div>
+            <!-- Placeholder for another figure if needed, or adjust col-md-6 above to col-md-8 offset-md-2 if it's a single image -->
+             <div class="col-md-6">
+                <!-- Intentionally empty or for another figure if you have one -->
+            </div>
           </div>
+
 
           <h3>Applications to Layered Transition-Metal Dichalcogenides (TMDCs)</h3>
           <p>
@@ -186,9 +197,9 @@
             Further details are available in our preprint: <a href="https://arxiv.org/abs/2406.15913" target="_blank" rel="noopener noreferrer">Semiempirical Pseudopotential Method for Transitional-Metal Dichalcogenides (arXiv:2406.15913)</a>.
           </p>
           <div class="row">
-            <div class="col-md-8 offset-md-2"> <!-- Centering the image a bit more if it's a single wide image -->
+            <div class="col-md-8 offset-md-2"> <!-- Fig 3: TMDC bands - standard wider size -->
                 <div class="figure-container">
-                    <img src="/assets/img/comp_bnd_tmdc.png" alt="Comparing Bandstructure DFT vs SEPM for Monolayer TMDCs">
+                    <img src="/assets/img/comp_bnd_tmdc.png" alt="Comparing Bandstructure DFT vs SEPM for Monolayer TMDCs" class="img-standard-size">
                     <p class="figure-caption">Fig 3: Band structure comparison for monolayer TMDCs: SEPM (solid lines) vs. DFT (circles).</p>
                 </div>
             </div>
@@ -206,13 +217,15 @@
             Current projects include investigating 2P interlayer excitons and electric-field-driven brightening of interlayer excitons.
           </p>
           <div class="row">
-            <div class="col-md-6">
+            <div class="col-md-8 offset-md-2"> <!-- Fig 4: MoS2 excitons - made wider -->
                 <div class="figure-container">
                     <img src="/assets/img/BL_MoS2.png" alt="s-like and p-like interlayer excitons in bilayer MoS2">
                     <p class="figure-caption">Fig 4: Calculated s-like and p-like interlayer exciton states in bilayer MoS₂.</p>
                 </div>
             </div>
-            <div class="col-md-6">
+          </div>
+          <div class="row mt-3"> <!-- Added margin top for spacing -->
+            <div class="col-md-10 offset-md-1"> <!-- Fig 5: WSe2 excitons - made wider and more centered -->
                 <div class="figure-container">
                     <img src="/assets/img/BL_WSe2.png" alt="Electric field effects on hole density and excitons in bilayer WSe2">
                     <p class="figure-caption">Fig 5: Electric field tunes hole distribution and exciton properties in bilayer WSe₂.</p>
