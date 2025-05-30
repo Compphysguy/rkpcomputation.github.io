@@ -103,106 +103,94 @@
     </nav>
   </header>
 
-  <div class="container mt-5 pt-5">
+    <div class="container mt-5 pt-5">
     <div class="post">
-      <article> <!-- Changed from section to article for semantic consistency if this is the main content block -->
-        <header class="post-header"> <!-- Added post-header for consistency if desired -->
-            <h1 class="post-title section-title">Publications</h1> <!-- Used section-title for styling consistency -->
-        </header>
-        <p style="margin-top: 1rem;">[<a href="https://scholar.google.com/citations?user=gvw7sG4AAAAJ&hl=en&oi=sra" target="_blank" rel="noopener noreferrer">Google Scholar</a>]</p>
+      <section class="publications-section">
+        <h2 class="section-title">Publications</h2>
+        <p>[<a href="https://scholar.google.com/citations?user=gvw7sG4AAAAJ&hl=en&oi=sra" target="_blank" rel="noopener noreferrer">Google Scholar</a>]</p>
 
-        <!-- Preprints (2025) -->
-        <h4 id="preprints" class="mt-4">Preprints</h4>
+                <!-- Preprints (2025) -->
+        <h4 id="preprints">Preprints</h4>
         <div class="publications-year h5 font-weight-bold mb-2">2025</div>
         <ol class="bibliography mb-5">
           <li class="mb-4">
-            <div class="row"> <!-- Using row for better layout -->
-              <div class="col-sm-10 p-0"> <!-- Adjusted column width -->
-                <div class="author text-muted">
-                  <strong>Raj Kumar Paudel</strong>, Chung-Yuan Ren, Yia-Chung Chang
-                </div>
-                <div class="title font-weight-medium">
-                  Semiempirical Pseudopotential Method for Transitional-Metal Dichalcogenides
-                </div>
-                <div class="venue mt-1"> <!-- Changed class to 'venue' for clarity -->
-                  <em>arXiv</em> 2406.15913 (2025) |
-                  <a href="https://arxiv.org/abs/2406.15913" target="_blank" rel="noopener noreferrer">
-                    arXiv:2406.15913
-                  </a><br>
-                  submitted to <strong>Physical Review Applied</strong>
-                </div>
+            <div class="col-sm-8 p-0">
+              <div class="author text-muted">
+                <strong>Raj Kumar Paudel</strong>, Chung-Yuan Ren, Yia-Chung Chang
+              </div>
+              <div class="title font-weight-medium">
+                Semiempirical Pseudopotential Method for Transitional-Metal Dichalcogenides
+              </div>
+              <div class="mt-1">
+                <em>arXiv</em> 2406.15913 (2025) |
+                <a href="https://arxiv.org/abs/2406.15913" target="_blank" rel="noopener noreferrer">
+                  arXiv:2406.15913
+                </a><br>
+                submitted to <strong>Physical Review Applied</strong>
               </div>
             </div>
           </li>
           <li class="mb-4">
-            <div class="row">
-              <div class="col-sm-10 p-0">
-                <div class="author text-muted">
-                  Soonyoung Cha, Zhaoran Xu, Tianyi Ouyang, Hongyu Yao, <strong>Raj Kumar Paudel</strong>,
-                  Takashi Taniguchi, Kenji Watanabe, Andrew Y. Joe, Yia-Chung Chang,
-                  Nathaniel M. Gabor, Chun Hung Lui
-                </div>
-                <div class="title font-weight-medium">
-                  2P Interlayer Exciton Revealed by Hybridization in Bilayer MoS₂
-                </div>
-                <div class="venue mt-1">
-                  (2025) submitted to <strong>Nature Physics</strong>
-                </div>
+            <div class="col-sm-8 p-0">
+              <div class="author text-muted">
+                Soonyoung Cha, Zhaoran Xu, Tianyi Ouyang, Hongyu Yao, <strong>Raj Kumar Paudel</strong>,
+                Takashi Taniguchi, Kenji Watanabe, Andrew Y. Joe, Yia-Chung Chang,
+                Nathaniel M. Gabor, Chun Hung Lui
+              </div>
+              <div class="title font-weight-medium">
+                2P Interlayer Exciton Revealed by Hybridization in Bilayer MoS₂
+              </div>
+              <div class="mt-1">
+                (2025) submitted to <strong>Nature Physics</strong>
               </div>
             </div>
           </li>
-          <li class="mb-4"> <!-- Added mb-4 for consistent spacing -->
-            <div class="row">
-              <div class="col-sm-10 p-0">
-                <div class="author text-muted">
-                  Tianyi Ouyang, Erfu Liu, Soonyoung Cha, <strong>Raj Kumar Paudel</strong>,
-                  Yiyang Sun, Zhaoran Xu, Takashi Taniguchi, Kenji Watanabe,
-                  Nathaniel M. Gabor, Yia-Chung Chang, Chun Hung Lui
-                </div>
-                <div class="title font-weight-medium">
-                  Brightening Interlayer Excitons by Electric-Field-Driven Hole Transfer in Bilayer WSe₂
-                </div>
-                <div class="venue mt-1">
-                  (2025) submitted to <strong>Physical Review Letters</strong>
-                </div>
+          <li>
+            <div class="col-sm-8 p-0">
+              <div class="author text-muted">
+                Tianyi Ouyang, Erfu Liu, Soonyoung Cha, <strong>Raj Kumar Paudel</strong>,
+                Yiyang Sun, Zhaoran Xu, Takashi Taniguchi, Kenji Watanabe,
+                Nathaniel M. Gabor, Yia-Chung Chang, Chun Hung Lui
+              </div>
+              <div class="title font-weight-medium">
+                Brightening Interlayer Excitons by Electric-Field-Driven Hole Transfer in Bilayer WSe₂
+              </div>
+              <div class="mt-1">
+                (2025) submitted to <strong>Physical Review Letters</strong>
               </div>
             </div>
           </li>
         </ol>
 
         <!-- Published Papers (2023) -->
-        <h4 id="papers" class="mt-4">Papers</h4>
+        <h4 id="papers">Papers</h4>
         <div class="publications-year h5 font-weight-bold mb-2">2023</div>
         <ol class="bibliography">
           <li class="mb-4">
-            <div id="paudel2023semi" class="row">
-              <div class="col-sm-10 p-0">
-                <div class="author text-muted">
-                  <strong>Raj Kumar Paudel</strong>, Chung-Yuan Ren,  Yia-Chung Chang
-                </div>
-                <div class="title font-weight-medium">Semi-Empirical Pseudopotential Method for Graphene and Graphene Nanoribbons</div>
-                <div class="venue mt-1">
-                  <em>MDPI, Nanomaterials</em> 2023 |
-                  <a href="https://www.mdpi.com/2079-4991/13/14/2066" target="_blank" rel="noopener noreferrer">
-                    MDPI
-                  </a>
-                </div>
+            <div id="paudel2023semi" class="col-sm-8 p-0">
+              <div class="author text-muted">
+                <strong>Raj Kumar Paudel</strong>, Chung-Yuan Ren,  Yia-Chung Chang
+              </div>
+              <div class="title font-weight-medium">Semi-Empirical Pseudopotential Method for Graphene and Graphene Nanoribbons</div>
+              <div class="mt-1">
+                <em>MDPI, Nanomaterials</em> 2023 |
+                <a href="https://www.mdpi.com/2079-4991/13/14/2066" target="_blank" rel="noopener noreferrer">
+                  MDPI
+                </a>
               </div>
             </div>
           </li>
-          <li class="mb-4"> <!-- Added mb-4 for consistent spacing -->
-            <div id="ren2023density" class="row">
-              <div class="col-sm-10 p-0">
-                <div class="author text-muted">
-                  Chung-Yuan Ren, <strong>Raj Kumar Paudel</strong>, Yia-Chung Chang
-                </div>
-                <div class="title font-weight-medium">Density Functional Theory for Buckyballs within Symmetrized Icosahedral Basis</div>
-                <div class="venue mt-1">
-                  <em>MDPI, Nanomaterials</em> 2023 |
-                  <a href="https://www.mdpi.com/2079-4991/13/13/1912" target="_blank" rel="noopener noreferrer">
-                    MDPI
-                  </a>
-                </div>
+          <li>
+            <div id="ren2023density" class="col-sm-8 p-0">
+              <div class="author text-muted">
+                Chung-Yuan Ren, <strong>Raj Kumar Paudel</strong>, Yia-Chung Chang
+              </div>
+              <div class="title font-weight-medium">Density Functional Theory for Buckyballs within Symmetrized Icosahedral Basis</div>
+              <div class="mt-1">
+                <em>MDPI, Nanomaterials</em> 2023 |
+                <a href="https://www.mdpi.com/2079-4991/13/13/1912" target="_blank" rel="noopener noreferrer">
+                  MDPI
+                </a>
               </div>
             </div>
           </li>
