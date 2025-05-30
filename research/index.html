@@ -86,6 +86,14 @@
         margin-top: -0.5rem;
         margin-bottom: 1.5rem;
     }
+    .figure-container { /* To group image and caption, and allow centering */
+        text-align: center; /* Centers inline-block images if needed */
+        margin-bottom: 1.5rem;
+    }
+    .figure-container img {
+        margin-bottom: 0.5rem; /* Space between image and caption */
+    }
+
 
     /* Footer basic styling */
     footer.sticky-bottom {
@@ -147,10 +155,6 @@
             and incorporates both local and non-local potential terms. These terms are carefully parameterized to reproduce key quantities
             obtained from first-principles Density Functional Theory (DFT) calculations or experimental data. This work is often in collaboration with <a href="https://sso.nknu.edu.tw/DataOpen2Search/vita.aspx?UNID=3094&Lang=enUS#" target="_blank" rel="noopener noreferrer">Prof. Chung-Yuan Ren (NKNU)</a>.
           </p>
-          <div>
-            <img src="/assets/img/SEPMproced.png" alt="General SEPM Procedure Flowchart">
-            <p class="figure-caption">Fig 1: General flowchart illustrating the Semi-Empirical Pseudopotential Method procedure.</p>
-          </div>
 
           <h3>Applications to Graphene and Graphene Nanoribbons</h3>
           <p>
@@ -161,35 +165,33 @@
           </p>
           <div class="row">
             <div class="col-md-6">
-              <img src="/assets/img/graphene_bndstr.png" alt="Graphene Band Structure via SEPM">
-              <p class="figure-caption">Fig 2: Electronic band structure of graphene calculated using SEPM, showing the Dirac cone at the K-point.</p>
+                <div class="figure-container">
+                    <img src="/assets/img/graphene_bandstr.png" alt="Graphene Band Structure via SEPM">
+                    <p class="figure-caption">Fig 1: Comparison of graphene band structure via SEPM (solid) and DFT (dashed).</p>
+                </div>
             </div>
             <div class="col-md-6">
-              <img src="/assets/img/bndstructureAGNRDFTEPM.png" alt="Armchair Graphene Nanoribbon Band Structure">
-              <p class="figure-caption">Fig 3: Comparison of aGNR band structures from DFT (dashed) and SEPM (solid) for different widths.</p>
-              <!-- You might also want to include agnr_strucfig8.png if it shows different structures clearly -->
-              <!-- 
-              <img src="/assets/img/agnr_strucfig8.png" alt="AGNR Structures">
-              <p class="figure-caption">Fig X: Structures of different armchair graphene nanoribbons studied.</p>
-              -->
+                <div class="figure-container">
+                    <img src="/assets/img/bndstructureAGNRDFTEPM.png" alt="Armchair Graphene Nanoribbon Band Structure">
+                    <p class="figure-caption">Fig 2: Comparison of aGNR band structures from DFT (dashed) and SEPM (solid).</p>
+                </div>
             </div>
           </div>
 
-          <h3>Applications to Fullerene (C60) Systems</h3>
+          <h3>Applications to Layered Transition-Metal Dichalcogenides (TMDCs)</h3>
           <p>
-            The SEPM framework is also being extended and applied to understand the electronic structure of molecular systems like C60 fullerenes and their derivatives.
-            Investigating charge transfer mechanisms and electronic properties of C60 molecular assemblies and solid-state configurations is crucial for organic electronics and photovoltaics.
-            Our related work includes DFT studies on buckyballs (see <a href="https://www.mdpi.com/2079-4991/13/13/1912" target="_blank" rel="noopener noreferrer">Density Functional Theory for Buckyballs within Symmetrized Icosahedral Basis, MDPI Nanomaterials 2023</a>), and SEPM offers a computationally less expensive route for larger systems or dynamics.
-            <!-- TODO: Add specific details about what SEPM has been used for in C60 if different from the general description -->
+            The SEPM framework has also been developed for monolayer Transition-Metal Dichalcogenides (TMDCs).
+            This allows for accurate and efficient calculation of their electronic band structures, which is crucial for understanding their optical and transport properties, including exciton formation.
+            Our work aims to provide a robust tool for exploring various TMDCs and their heterostructures.
+            Further details are available in our preprint: <a href="https://arxiv.org/abs/2406.15913" target="_blank" rel="noopener noreferrer">Semiempirical Pseudopotential Method for Transitional-Metal Dichalcogenides (arXiv:2406.15913)</a>.
           </p>
-          <div>
-            <!-- TODO: Add a figure relevant to C60 and SEPM. Could be:
-                 1. A C60 molecule structure.
-                 2. SEPM-calculated electronic levels/DOS for C60.
-                 3. A diagram showing charge transfer in a C60 assembly.
-                 For now, a placeholder or a simple structure: -->
-            <img src="/assets/img/c60_placeholder.png" alt="C60 Fullerene Molecule Structure (Placeholder)"> <!-- Replace c60_placeholder.png with an actual image -->
-            <p class="figure-caption">Fig 4: Structure of a C60 fullerene molecule. (Placeholder - ideally show SEPM results).</p>
+          <div class="row">
+            <div class="col-md-8 offset-md-2"> <!-- Centering the image a bit more if it's a single wide image -->
+                <div class="figure-container">
+                    <img src="/assets/img/comp_bnd_tmdc.png" alt="Comparing Bandstructure DFT vs SEPM for Monolayer TMDCs">
+                    <p class="figure-caption">Fig 3: Band structure comparison for monolayer TMDCs: SEPM (solid lines) vs. DFT (circles).</p>
+                </div>
+            </div>
           </div>
         </section>
 
@@ -198,19 +200,24 @@
           <h2 class="section-title">Exciton Physics in Transition Metal Dichalcogenides (TMDCs)</h2>
           <p>
             Monolayer and few-layer Transition Metal Dichalcogenides (TMDCs) are fascinating materials exhibiting strong light-matter interactions dominated by excitons—bound electron-hole pairs.
-            My research in this area focuses on developing theoretical frameworks and employing advanced many-body approaches (including SEPM and DFT-based techniques) to model exciton binding energies,
-            their dynamics, and optical properties in monolayer, bilayer, and twisted bilayer TMDCs.
+            My research in this area focuses on developing theoretical frameworks and employing advanced many-body approaches to model exciton binding energies,
+            their dynamics, and optical properties in monolayer and bilayer TMDCs.
             Understanding and controlling exciton behavior is key to harnessing TMDCs for optoelectronic devices like LEDs, solar cells, and valleytronic applications.
             Current projects include investigating 2P interlayer excitons and electric-field-driven brightening of interlayer excitons.
           </p>
-          <p>
-            We are developing SEPM for TMDCs (see preprint: <a href="https://arxiv.org/abs/2406.15913" target="_blank" rel="noopener noreferrer">Semiempirical Pseudopotential Method for Transitional-Metal Dichalcogenides, arXiv:2406.15913</a>)
-            to efficiently model these complex systems.
-          </p>
-          <div>
-            <img src="/assets/img/FinalfittingWSE2.png" alt="Electronic Structure and Exciton Properties of WSe2">
-            <p class="figure-caption">Fig 5: Example of fitting SEPM parameters to DFT band structure for WSe2, crucial for accurate exciton calculations.</p>
-            <!-- TODO: Consider a more general exciton diagram if available, or one showing interlayer excitons -->
+          <div class="row">
+            <div class="col-md-6">
+                <div class="figure-container">
+                    <img src="/assets/img/BL_MoS2.png" alt="s-like and p-like interlayer excitons in bilayer MoS2">
+                    <p class="figure-caption">Fig 4: Calculated s-like and p-like interlayer exciton states in bilayer MoS₂.</p>
+                </div>
+            </div>
+            <div class="col-md-6">
+                <div class="figure-container">
+                    <img src="/assets/img/BL_WSe2.png" alt="Electric field effects on hole density and excitons in bilayer WSe2">
+                    <p class="figure-caption">Fig 5: Electric field tunes hole distribution and exciton properties in bilayer WSe₂.</p>
+                </div>
+            </div>
           </div>
         </section>
 
