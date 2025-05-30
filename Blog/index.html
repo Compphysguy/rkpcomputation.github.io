@@ -6,8 +6,8 @@
   <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
 
-  <title>Raj Kumar Paudel | Blog</title> <!-- Changed from Blogs to Blog -->
-  <meta name="description" content="A simple, whitespace theme for academics. Based on [*folio](https://github.com/bogoli/-folio) design.">
+  <title>Raj Kumar Paudel | Blog</title>
+  <meta name="description" content="Personal blog of Raj Kumar Paudel, Computational Physicist."> <!-- Slightly more specific description -->
 
   <!-- Bootstrap & MDB -->
   <link href="/assets/css/bootstrap.min.css" rel="stylesheet">
@@ -18,13 +18,15 @@
   <link rel="stylesheet" href="/assets/css/academicons.min.css">
   <link rel="stylesheet" type="text/css" href="https://fonts.googleapis.com/css?family=Roboto:300,400,500,700|Roboto+Slab:100,300,400,500,700|Material+Icons">
 
-  <!-- Styles -->
-  <link rel="icon" href="data:image/svg+xml,<svg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 100%22><text y=%22.9em%22 font-size=%2290%22>🔬</text></svg>"> <!-- Changed Favicon to match About page -->
+  <!-- Favicon -->
+  <link rel="icon" href="data:image/svg+xml,<svg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 100%22><text y=%22.9em%22 font-size=%2290%22>🔬</text></svg>">
+  
+  <!-- Main Custom CSS -->
   <link rel="stylesheet" href="/assets/css/main.css">
   <link rel="canonical" href="https://rkpcomputation.github.io/Blog/">
 
   <style>
-    /* Custom Navbar Toggle Icon (Example, if not in main.css) */
+    /* Custom Navbar Toggle Icon */
     .icon-bar {
       display: block;
       width: 22px;
@@ -45,14 +47,52 @@
     .navbar-toggler:not(.collapsed) .bottom-bar {
       transform: translateY(-6px) rotate(-45deg);
     }
-    /* Footer basic styling (consistent with About page) */
+
+    /* Section Titles (consistent with Research/About page, though not strictly needed for simple blog post list) */
+    .section-title, .post-title { /* Applying section-title style to post-title for consistency */
+      font-size: 1.75rem;
+      color: #333;
+      margin-bottom: 1rem;
+      border-bottom: 2px solid #007bff;
+      padding-bottom: 0.5rem;
+      display: inline-block;
+    }
+     @media (max-width: 767px) {
+      .section-title, .post-title {
+        font-size: 1.5rem;
+        display: block;
+        text-align: center;
+      }
+    }
+    
+    /* If you list blog posts, you might add styles for them here */
+    .blog-post-item {
+        margin-bottom: 2rem;
+        padding-bottom: 1rem;
+        border-bottom: 1px solid #eee;
+    }
+    .blog-post-item:last-child {
+        border-bottom: none;
+    }
+    .blog-post-item h2 {
+        font-size: 1.5rem;
+        color: #0056b3;
+    }
+    .blog-post-item .post-meta {
+        font-size: 0.9rem;
+        color: #777;
+        margin-bottom: 0.5rem;
+    }
+
+
+    /* Footer basic styling */
     footer.sticky-bottom {
         padding-top: 1rem;
         padding-bottom: 1rem;
-        background-color: #f8f9fa; /* Light background for footer */
+        background-color: #f8f9fa;
         font-size: 0.9rem;
         border-top: 1px solid #e7e7e7;
-        text-align: center; /* Center footer content */
+        text-align: center;
     }
   </style>
 
@@ -86,21 +126,45 @@
     </nav>
   </header>
 
-  <div class="container mt-5 pt-5"> <!-- Added pt-5 for fixed-top navbar -->
+  <div class="container mt-5 pt-5">
     <div class="post">
       <header class="post-header">
-        <h1 class="post-title">Blog</h1> <!-- Changed from Blogs to Blog -->
-        <p class="post-description"></p>
+        <h1 class="post-title">Blog</h1>
+        <p class="post-description lead mt-2">Thoughts, updates, and explorations beyond formal research.</p> <!-- Added a lead paragraph -->
       </header>
 
-      <article>
-        <!-- Removed <h4 id="blog">Blog</h4> as H1 is already Blog -->
-        <p>I will try to write blog every month onwards what I like. Besides academic research, I love to go hiking in mountains and travelling to visit new places.</p>
+      <article class="mt-3">
+        <p>
+          Welcome to my blog! Here, I plan to share insights from my academic journey, discuss topics in computational physics that fascinate me,
+          and occasionally write about my experiences with hiking, traveling, and other interests.
+        </p>
+        <p>
+          I aim to post updates periodically. Stay tuned!
+        </p>
+
+        <!-- Example of how you might list blog posts later -->
+        <!--
+        <div class="blog-post-list mt-4">
+          <div class="blog-post-item">
+            <h2><a href="/Blog/my-first-post/">My First Awesome Blog Post</a></h2>
+            <p class="post-meta">Posted on January 15, 2024</p>
+            <p>This is a short excerpt of my first blog post. It talks about interesting things... <a href="/Blog/my-first-post/">Read more »</a></p>
+          </div>
+          <div class="blog-post-item">
+            <h2><a href="/Blog/another-topic/">Exploring Another Topic in Physics</a></h2>
+            <p class="post-meta">Posted on February 01, 2024</p>
+            <p>A dive into the complexities of another fascinating subject within computational physics... <a href="/Blog/another-topic/">Read more »</a></p>
+          </div>
+        </div>
+        -->
+        
+        <p class="text-center mt-5"><em>(More posts coming soon...)</em></p>
+
       </article>
     </div>
   </div>
 
-  <footer class="sticky-bottom mt-5 py-3"> <!-- Standardized footer -->
+  <footer class="sticky-bottom mt-5 py-3">
     <div class="container text-center">
       © <span id="currentYearFooter"></span> Raj Kumar Paudel.
       Powered by <a href="https://jekyllrb.com/" target="_blank" rel="noopener noreferrer">Jekyll</a> and
@@ -110,13 +174,10 @@
   </footer>
   
   <script>
-    // Script for footer year and last updated date
     if (document.getElementById('currentYearFooter')) {
       document.getElementById('currentYearFooter').textContent = new Date().getFullYear();
     }
     if (document.getElementById('lastUpdated')) {
-      // You might want to set this date manually or use a build process to update it
-      // document.getElementById('lastUpdated').textContent = 'July 27, 2023'; // Or make dynamic
       document.getElementById('lastUpdated').textContent = new Date(document.lastModified).toLocaleDateString('en-US', {
         year: 'numeric', month: 'long', day: 'numeric'
       });
@@ -129,12 +190,10 @@
   <script src="/assets/js/popper.min.js"></script>
   <script src="/assets/js/bootstrap.min.js"></script>
   <script src="/assets/js/mdb.min.js"></script>
-  <!-- Medium Zoom JS -->
+  <!-- Medium Zoom JS (optional, if you plan to have images in blog posts) -->
   <script src="https://cdn.jsdelivr.net/npm/medium-zoom@1.0.6/dist/medium-zoom.min.js"></script>
   <script src="/assets/js/zoom.js"></script>
-  <!-- Load Common JS -->
-  <!-- <script src="/assets/js/common.js"></script> --> <!-- Assuming common.js is needed -->
-  <!-- MathJax -->
+  <!-- MathJax (optional, if you plan to use math in blog posts) -->
   <script type="text/javascript">
     window.MathJax = { tex: { tags: 'ams' } };
   </script>
