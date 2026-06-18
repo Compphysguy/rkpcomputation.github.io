@@ -5,18 +5,38 @@
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
+
   <title>Raj Kumar Paudel | Research</title>
-  <meta name="description" content="Research on computational condensed matter physics, including method development (SEPM) and applications to 2D materials and excitons.">
+  <meta name="description" content="Research on computational condensed matter physics, including SEPM method development and applications to 2D materials and excitons.">
+
+  <!-- Bootstrap & MDB -->
   <link href="/assets/css/bootstrap.min.css" rel="stylesheet">
   <link rel="stylesheet" href="/assets/css/mdb.min.css">
+
+  <!-- Fonts & Icons -->
   <link rel="stylesheet" href="/assets/css/all.min.css">
   <link rel="stylesheet" href="/assets/css/academicons.min.css">
   <link rel="stylesheet" type="text/css" href="https://fonts.googleapis.com/css?family=Roboto:300,400,500,700|Roboto+Slab:100,300,400,500,700|Material+Icons">
+
   <link rel="icon" href="data:image/svg+xml,<svg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 100%22><text y=%22.9em%22 font-size=%2290%22>🔬</text></svg>">
   <link rel="stylesheet" href="/assets/css/main.css">
   <link rel="canonical" href="https://rkpcomputation.github.io/research/">
+
   <style>
-    /* Custom Navbar Toggle Icon */
+    body {
+      background: #f8f9fa;
+    }
+
+    .navbar-nav .nav-link {
+      font-weight: 500;
+      padding-left: 0.9rem;
+      padding-right: 0.9rem;
+    }
+
+    .navbar-nav .nav-item.active .nav-link {
+      color: #007bff !important;
+    }
+
     .icon-bar {
       display: block;
       width: 22px;
@@ -25,76 +45,135 @@
       margin: 4px auto;
       transition: all 0.3s ease;
     }
+
     .navbar-light .navbar-toggler .icon-bar {
-      background-color: rgba(0,0,0,.5);
+      background-color: rgba(0, 0, 0, .5);
     }
+
     .navbar-toggler:not(.collapsed) .top-bar {
       transform: translateY(6px) rotate(45deg);
     }
+
     .navbar-toggler:not(.collapsed) .middle-bar {
       opacity: 0;
     }
+
     .navbar-toggler:not(.collapsed) .bottom-bar {
       transform: translateY(-6px) rotate(-45deg);
     }
 
-    /* Section Titles */
+    .page-wrap {
+      padding-top: 6rem;
+      padding-bottom: 3rem;
+    }
+
+    .research-page {
+      max-width: 1000px;
+      margin: 0 auto;
+      background: #fff;
+      border-radius: 16px;
+      padding: 2rem 1.5rem;
+      box-shadow: 0 6px 22px rgba(0, 0, 0, 0.05);
+    }
+
+    .post-title {
+      font-size: 2rem;
+      font-weight: 700;
+      color: #222;
+      margin-bottom: 0.35rem;
+    }
+
+    .lead {
+      color: #555;
+      font-size: 1.05rem;
+      line-height: 1.8;
+      margin-bottom: 2rem;
+    }
+
     .section-title {
-      font-size: 1.75rem;
-      color: #333;
+      font-size: 1.55rem;
+      color: #222;
+      font-weight: 700;
       margin-bottom: 1rem;
+      padding-bottom: 0.45rem;
       border-bottom: 2px solid #007bff;
-      padding-bottom: 0.5rem;
       display: inline-block;
     }
-     @media (max-width: 767px) {
-      .section-title {
-        font-size: 1.5rem;
-        display: block;
-        text-align: center;
-      }
+
+    .research-card {
+      background: #fff;
+      border: 1px solid #e8e8e8;
+      border-radius: 14px;
+      padding: 1.25rem 1.25rem 1rem;
+      margin-bottom: 1.5rem;
+      box-shadow: 0 3px 12px rgba(0, 0, 0, 0.04);
     }
 
-    .research-sub-section {
-        margin-bottom: 2.5rem;
+    .research-card h3 {
+      font-size: 1.2rem;
+      font-weight: 700;
+      color: #0b4f9c;
+      margin-top: 0;
+      margin-bottom: 0.75rem;
     }
 
-    .research-sub-section h3 {
-        font-size: 1.4rem;
-        color: #0056b3;
-        margin-top: 1.5rem;
-        margin-bottom: 0.75rem;
+    .research-card p {
+      color: #555;
+      line-height: 1.75;
+      margin-bottom: 1rem;
+    }
+
+    .figure-grid {
+      margin-top: 1rem;
     }
 
     .figure-container {
-        text-align: center;
-        margin-bottom: 2rem; /* Increased bottom margin for better spacing */
+      text-align: center;
+      margin-bottom: 1.5rem;
     }
 
     .figure-container img {
-        display: block; /* Ensures margin auto works for centering */
-        margin-left: auto;
-        margin-right: auto;
-        max-width: 100%; /* Use full width of its column container */
-        height: auto;   /* Maintain aspect ratio by default */
-        /* Optional: To try and normalize heights - experiment with this */
-        /* max-height: 400px; */ /* Adjust pixel value as needed */
-        /* object-fit: contain; */ /* Ensures image scales within bounds without cropping */
-        border: 1px solid #ddd;
-        padding: 5px;
-        border-radius: 4px;
-        margin-bottom: 0.5rem;
+      display: block;
+      margin: 0 auto;
+      width: 100%;
+      max-width: 100%;
+      height: auto;
+      border: 1px solid #ddd;
+      padding: 6px;
+      border-radius: 8px;
+      background: #fff;
     }
 
     .figure-caption {
-        text-align: center;
-        font-style: italic;
-        color: #555;
-        font-size: 0.9em;
-        margin-top: 0.25rem; /* Slightly reduced top margin if image margin-bottom is 0.5rem */
+      text-align: center;
+      font-style: italic;
+      color: #666;
+      font-size: 0.92rem;
+      margin-top: 0.5rem;
+      line-height: 1.5;
     }
 
-    /* Footer basic styling */
+    .highlight-link {
+      color: #007bff;
+      text-decoration: none;
+      font-weight: 500;
+    }
+
+    .highlight-link:hover {
+      text-decoration: underline;
+    }
+
+    .topic-list {
+      padding-left: 1.1rem;
+      margin-bottom: 0;
+      color: #555;
+    }
+
+    .topic-list li {
+      margin-bottom: 0.35rem;
+      line-height: 1.6;
+    }
+
     footer.sticky-bottom {
       padding-top: 1rem;
       padding-bottom: 1rem;
@@ -103,16 +182,47 @@
       border-top: 1px solid #e7e7e7;
       text-align: center;
     }
+
+    @media (max-width: 767px) {
+      .page-wrap {
+        padding-top: 5.5rem;
+      }
+
+      .research-page {
+        padding: 1.25rem 1rem;
+        border-radius: 12px;
+      }
+
+      .post-title {
+        font-size: 1.6rem;
+        text-align: center;
+      }
+
+      .section-title {
+        font-size: 1.35rem;
+        display: block;
+        text-align: center;
+      }
+
+      .research-card {
+        padding: 1rem;
+      }
+
+      .research-card h3 {
+        font-size: 1.08rem;
+      }
+    }
   </style>
 </head>
 
 <body class="fixed-top-nav sticky-bottom-footer">
   <header>
-    <nav id="navbar" class="navbar navbar-light navbar-expand-sm fixed-top bg-white shadow-sm">
+    <nav id="navbar" class="navbar navbar-light navbar-expand-lg fixed-top bg-white shadow-sm">
       <div class="container">
         <a class="navbar-brand title font-weight-lighter" href="/">
-          <span class="font-weight-bold"> Raj</span> Kumar Paudel
+          <span class="font-weight-bold">Raj</span> Kumar Paudel
         </a>
+
         <button class="navbar-toggler collapsed ml-auto" type="button" data-toggle="collapse" data-target="#navbarNav"
           aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
           <span class="sr-only">Toggle navigation</span>
@@ -120,8 +230,9 @@
           <span class="icon-bar middle-bar"></span>
           <span class="icon-bar bottom-bar"></span>
         </button>
+
         <div class="collapse navbar-collapse text-right" id="navbarNav">
-          <ul class="navbar-nav ml-auto flex-nowrap">
+          <ul class="navbar-nav ml-auto">
             <li class="nav-item"><a class="nav-link" href="/">About</a></li>
             <li class="nav-item"><a class="nav-link" href="/publications/">Publications</a></li>
             <li class="nav-item active"><a class="nav-link" href="/research/">Research</a></li>
@@ -133,128 +244,135 @@
     </nav>
   </header>
 
-  <div class="container mt-5 pt-5">
-    <div class="post">
-      <header class="post-header">
-        <h1 class="post-title">Research</h1>
-      </header>
-      <article>
-        <p class="lead">My research focuses on developing and applying advanced computational methods to understand the electronic and optical properties of emerging quantum materials. This involves both method development and their application to specific material systems like 2D materials, nanostructures, and molecular assemblies.</p>
+  <main class="page-wrap">
+    <div class="container">
+      <section class="research-page">
+        <header class="post-header mb-4">
+          <h1 class="post-title">Research</h1>
+          <p class="lead mb-0">
+            My research focuses on developing and applying computational methods to understand the electronic and optical properties of emerging quantum materials.
+            I work on method development, band-structure modeling, and exciton physics in low-dimensional systems.
+          </p>
+        </header>
 
-        <!-- Section 1: SEPM -->
-        <section class="research-sub-section">
+        <section class="research-card">
           <h2 class="section-title">Semi-Empirical Pseudopotential Method (SEPM)</h2>
           <p>
-            A significant part of my work involves the development and application of the Semi-Empirical Pseudopotential Method (SEPM).
-            This method provides an efficient and accurate way to calculate the electronic structures of large and complex material systems.
-            Our SEPM approach typically combines two-dimensional plane waves with B-spline functions for the perpendicular direction,
-            and incorporates both local and non-local potential terms. These terms are carefully parameterized to reproduce key quantities
-            obtained from first-principles Density Functional Theory (DFT) calculations or experimental data. This work is often in collaboration with <a href="https://sso.nknu.edu.tw/DataOpen2Search/vita.aspx?UNID=3094&Lang=enUS#" target="_blank" rel="noopener noreferrer">Prof. Chung-Yuan Ren (NKNU)</a>.
+            A major part of my work is the development and application of the Semi-Empirical Pseudopotential Method (SEPM).
+            This approach provides an efficient and accurate way to compute electronic structures for large and complex systems.
+            In our implementation, the in-plane coordinates are treated with plane waves, while the out-of-plane direction is expanded using B-spline basis functions.
+            The method includes local and non-local potential terms and is parameterized to reproduce key results from first-principles Density Functional Theory (DFT) calculations and, where available, experimental data.
+          </p>
+          <p>
+            This work is carried out in collaboration with <a class="highlight-link" href="https://sso.nknu.edu.tw/DataOpen2Search/vita.aspx?UNID=3094&Lang=enUS#" target="_blank" rel="noopener noreferrer">Prof. Chung-Yuan Ren (NKNU)</a>.
           </p>
 
           <h3>Applications to Graphene and Graphene Nanoribbons</h3>
           <p>
-            We have successfully applied SEPM to investigate the electronic properties of graphene and various armchair graphene nanoribbons (aGNRs).
-            The method accurately captures the characteristic Dirac cones in graphene and the band gap variations in aGNRs depending on their width and edge structure.
-            This allows for efficient exploration of these materials for potential nanoelectronic applications.
-            Details can be found in our publication: <a href="https://www.mdpi.com/2079-4991/13/14/2066" target="_blank" rel="noopener noreferrer">Semi-Empirical Pseudopotential Method for Graphene and Graphene Nanoribbons (MDPI Nanomaterials 2023)</a>.
+            We have applied SEPM to graphene and armchair graphene nanoribbons (aGNRs), capturing the Dirac-cone physics of graphene and the width-dependent band gaps of nanoribbons.
+            These results are useful for understanding nanoelectronic behavior in carbon-based materials.
+            Related work is reported in <a class="highlight-link" href="https://www.mdpi.com/2079-4991/13/14/2066" target="_blank" rel="noopener noreferrer">Semi-Empirical Pseudopotential Method for Graphene and Graphene Nanoribbons</a>.
           </p>
-          <div class="row">
-            <div class="col-md-8 offset-md-2">
+
+          <div class="figure-grid">
+            <div class="row">
+              <div class="col-md-10 offset-md-1">
                 <div class="figure-container">
-                    <img src="/assets/img/graphene_bandstr.png" alt="Graphene Band Structure via SEPM">
-                    <p class="figure-caption">Fig 1: Comparison of graphene band structure via SEPM (solid) and DFT (dashed).</p>
+                  <img src="/assets/img/graphene_bandstr.png" alt="Graphene band structure via SEPM">
+                  <div class="figure-caption">Fig. 1: Graphene band structure from SEPM (solid) compared with DFT (dashed).</div>
                 </div>
+              </div>
             </div>
-          </div>
-          <div class="row">
-            <div class="col-md-8 offset-md-2">
+            <div class="row">
+              <div class="col-md-10 offset-md-1">
                 <div class="figure-container">
-                    <img src="/assets/img/bndstructureAGNRDFTEPM.png" alt="Armchair Graphene Nanoribbon Band Structure">
-                    <p class="figure-caption">Fig 2: Comparison of aGNR band structures from DFT (dashed) and SEPM (solid).</p>
+                  <img src="/assets/img/bndstructureAGNRDFTEPM.png" alt="Armchair graphene nanoribbon band structure">
+                  <div class="figure-caption">Fig. 2: aGNR band structures from DFT (dashed) and SEPM (solid).</div>
                 </div>
+              </div>
             </div>
           </div>
 
-
-          <h3>Applications to Layered Transition-Metal Dichalcogenides (TMDCs)</h3>
+          <h3>Applications to Transition-Metal Dichalcogenides (TMDCs)</h3>
           <p>
-            The SEPM framework has also been developed for monolayer Transition-Metal Dichalcogenides (TMDCs).
-            This allows for accurate and efficient calculation of their electronic band structures, which is crucial for understanding their optical and transport properties, including exciton formation.
-            Our work aims to provide a robust tool for exploring various TMDCs and their heterostructures.
-            Further details are available in our preprint: <a href="https://arxiv.org/abs/2406.15913" target="_blank" rel="noopener noreferrer">Semiempirical Pseudopotential Method for Transitional-Metal Dichalcogenides (arXiv:2406.15913)</a>.
+            The SEPM framework has also been extended to monolayer transition-metal dichalcogenides (TMDCs).
+            This provides a fast and reliable way to calculate band structures and to study the electronic ingredients that influence optical response and exciton formation.
+            A preprint is available here: <a class="highlight-link" href="https://arxiv.org/abs/2406.15913" target="_blank" rel="noopener noreferrer">Semiempirical Pseudopotential Method for Transitional-Metal Dichalcogenides</a>.
           </p>
-          <div class="row">
-            <div class="col-md-8 offset-md-2">
+
+          <div class="figure-grid">
+            <div class="row">
+              <div class="col-md-10 offset-md-1">
                 <div class="figure-container">
-                    <img src="/assets/img/comp_bnd_tmdc.png" alt="Comparing Bandstructure DFT vs SEPM for Monolayer TMDCs">
-                    <p class="figure-caption">Fig 3: Band structure comparison for monolayer TMDCs: SEPM (solid lines) vs. DFT (circles).</p>
+                  <img src="/assets/img/comp_bnd_tmdc.png" alt="Comparison of DFT and SEPM band structure for monolayer TMDCs">
+                  <div class="figure-caption">Fig. 3: Band-structure comparison for monolayer TMDCs: SEPM (solid) versus DFT (circles).</div>
                 </div>
+              </div>
             </div>
           </div>
         </section>
 
-        <!-- Section 2: Excitons in TMDCs -->
-        <section class="research-sub-section">
-          <h2 class="section-title">Exciton Physics in Transition Metal Dichalcogenides (TMDCs)</h2>
+        <section class="research-card">
+          <h2 class="section-title">Exciton Physics in TMDCs</h2>
           <p>
-            Monolayer and few-layer Transition Metal Dichalcogenides (TMDCs) are fascinating materials exhibiting strong light-matter interactions dominated by excitons—bound electron-hole pairs.
-            My research in this area focuses on developing theoretical frameworks and employing advanced many-body approaches to model exciton binding energies,
-            their dynamics, and optical properties in monolayer and bilayer TMDCs.
-            Understanding and controlling exciton behavior is key to harnessing TMDCs for optoelectronic devices like LEDs, solar cells, and valleytronic applications.
-            Current projects include investigating 2P interlayer excitons and electric-field-driven brightening of interlayer excitons.
+            Monolayer and few-layer TMDCs exhibit strong light-matter interaction dominated by excitons, which are bound electron-hole pairs.
+            My research in this area focuses on exciton binding energies, interlayer and intralayer excitons, electric-field control, and hybridization effects.
+            These systems are important for next-generation optoelectronic and valleytronic devices.
           </p>
-          <div class="row">
-            <div class="col-md-8 offset-md-2">
+          <ul class="topic-list">
+            <li>Interlayer and intralayer excitons in monolayer and bilayer TMDCs</li>
+            <li>Electric-field-driven brightening and charge redistribution</li>
+            <li>2p interlayer exciton states and hybridization effects</li>
+          </ul>
+
+          <div class="figure-grid mt-3">
+            <div class="row">
+              <div class="col-md-10 offset-md-1">
                 <div class="figure-container">
-                    <img src="/assets/img/BL_MoS2.png" alt="s-like and p-like interlayer excitons in bilayer MoS2">
-                    <p class="figure-caption">Fig 4: Calculated s-like and p-like interlayer exciton states in bilayer MoS₂.</p>
+                  <img src="/assets/img/BL_MoS2.png" alt="Interlayer excitons in bilayer MoS2">
+                  <div class="figure-caption">Fig. 4: Calculated s-like and p-like interlayer exciton states in bilayer MoS₂.</div>
                 </div>
+              </div>
             </div>
-          </div>
-          <div class="row">
-            <div class="col-md-8 offset-md-2">
+            <div class="row">
+              <div class="col-md-10 offset-md-1">
                 <div class="figure-container">
-                    <img src="/assets/img/BL_WSe2.png" alt="Electric field effects on hole density and excitons in bilayer WSe2">
-                    <p class="figure-caption">Fig 5: Electric field tunes hole distribution and exciton properties in bilayer WSe₂.</p>
+                  <img src="/assets/img/BL_WSe2.png" alt="Electric field effects in bilayer WSe2">
+                  <div class="figure-caption">Fig. 5: Electric field tunes hole distribution and exciton properties in bilayer WSe₂.</div>
                 </div>
+              </div>
             </div>
           </div>
         </section>
 
-        <!-- Section 3: Future Directions -->
-        <section class="research-sub-section">
+        <section class="research-card">
           <h2 class="section-title">Future Directions</h2>
           <p>
-            Future work aims to extend these computational models. One key goal is to use planar-basis Density Functional Theory (DFT) calculations and further refine SEPM
-            to accurately model van der Waals (vdW) interactions within bilayers of graphene and TMDCs. The formation of moiré superlattices due to lattice mismatch in stacked TMDC layers
-            leads to periodic variations in the electronic potential. By efficiently calculating the vdW-induced moiré superlattice potential, we can gain valuable insights into
-            the band-edge profiles at different twist angles and explore the intriguing electronic phenomena in these systems, such as moiré excitons and correlated electronic states.
+            Future work will extend these models toward stacked 2D materials and moiré systems.
+            A key goal is to combine planar-basis DFT with improved SEPM parameterization to model van der Waals interactions in graphene and TMDC bilayers.
+            This will help describe twist-angle-dependent band-edge profiles, moiré potentials, excitons, and correlated electronic states.
           </p>
         </section>
-
-      </article>
+      </section>
     </div>
-  </div>
+  </main>
 
   <footer class="sticky-bottom mt-5 py-3">
     <div class="container text-center">
       © <span id="currentYearFooter"></span> Raj Kumar Paudel.
       Powered by <a href="https://jekyllrb.com/" target="_blank" rel="noopener noreferrer">Jekyll</a> and
-      <a href="https://pages.github.com/" target="_blank" rel="noopener noreferrer">GitHub Pages</a>.
+      <a href="https://pages.github.com/" target="_blank" rel="noopener noreferrer">GitHub Pages</a>.<br>
       Last updated: <span id="lastUpdated"></span>.
     </div>
   </footer>
-  
+
   <script>
-    if (document.getElementById('currentYearFooter')) {
-      document.getElementById('currentYearFooter').textContent = new Date().getFullYear();
-    }
-    if (document.getElementById('lastUpdated')) {
-      document.getElementById('lastUpdated').textContent = new Date(document.lastModified).toLocaleDateString('en-US', {
-        year: 'numeric', month: 'long', day: 'numeric'
-      });
-    }
+    document.getElementById('currentYearFooter').textContent = new Date().getFullYear();
+    document.getElementById('lastUpdated').textContent = new Date(document.lastModified).toLocaleDateString('en-US', {
+      year: 'numeric',
+      month: 'long',
+      day: 'numeric'
+    });
   </script>
 
   <script src="/assets/js/jquery.min.js"></script>
