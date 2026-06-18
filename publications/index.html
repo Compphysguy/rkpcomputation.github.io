@@ -1,472 +1,204 @@
-<!DOCTYPE html>
-<html lang="en">
+<style>
+  .publications-section {
+    max-width: 950px;
+    margin: 0 auto;
+  }
 
-<head>
-  <meta charset="utf-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
-  <meta http-equiv="X-UA-Compatible" content="IE=edge">
-  <title>Raj Kumar Paudel | Publications</title>
-  <meta name="description" content="A simple, whitespace theme for academics. Based on al-folio design.">
-  <!-- Bootstrap & MDB -->
-  <link href="/assets/css/bootstrap.min.css" rel="stylesheet">
-  <link rel="stylesheet" href="/assets/css/mdb.min.css">
-  <!-- Fonts & Icons -->
-  <link rel="stylesheet" href="/assets/css/all.min.css">
-  <!-- Removed integrity hashes for brevity, ensure they are correct in your actual files if needed -->
-  <link rel="stylesheet" href="/assets/css/academicons.min.css">
-  <link rel="stylesheet"
-    href="https://fonts.googleapis.com/css?family=Roboto:300,400,500,700|Roboto+Slab:100,300,400,500,700|Material+Icons">
-  <!-- Custom Styles -->
-  <link rel="stylesheet" href="/assets/css/main.css">
-  <link rel="canonical" href="https://rkpcomputation.github.io/publications/">
-  <style>
-    /* Custom Navbar Toggle Icon (Example, if not in main.css) */
-    .icon-bar {
-      display: block;
-      width: 22px;
-      height: 2px;
-      background-color: #333;
-      margin: 4px auto;
-      transition: all 0.3s ease;
-    }
+  .section-title {
+    font-size: 2rem;
+    font-weight: 700;
+    color: #222;
+    margin-bottom: 0.25rem;
+    border-bottom: 3px solid #007bff;
+    display: inline-block;
+    padding-bottom: 0.35rem;
+  }
 
-    .navbar-light .navbar-toggler .icon-bar {
-      background-color: rgba(0, 0, 0, .5);
-    }
+  .pub-subtitle {
+    color: #666;
+    margin-bottom: 1.5rem;
+  }
 
-    .navbar-toggler:not(.collapsed) .top-bar {
-      transform: translateY(6px) rotate(45deg);
-    }
+  .pub-year {
+    font-size: 1.35rem;
+    font-weight: 700;
+    margin: 2rem 0 1rem;
+    color: #111;
+  }
 
-    .navbar-toggler:not(.collapsed) .middle-bar {
-      opacity: 0;
-    }
+  .pub-list {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+  }
 
-    .navbar-toggler:not(.collapsed) .bottom-bar {
-      transform: translateY(-6px) rotate(-45deg);
-    }
+  .pub-item {
+    background: #fff;
+    border: 1px solid #e9ecef;
+    border-left: 4px solid #007bff;
+    border-radius: 14px;
+    padding: 1.1rem 1.25rem;
+    margin-bottom: 1rem;
+    box-shadow: 0 4px 14px rgba(0, 0, 0, 0.04);
+    transition: transform 0.2s ease, box-shadow 0.2s ease;
+  }
 
-    /* Section Titles (consistent with About page) */
+  .pub-item:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 8px 22px rgba(0, 0, 0, 0.08);
+  }
+
+  .pub-authors {
+    font-size: 0.95rem;
+    color: #666;
+    margin-bottom: 0.35rem;
+    line-height: 1.55;
+  }
+
+  .pub-authors strong {
+    color: #222;
+  }
+
+  .pub-title {
+    font-size: 1.08rem;
+    font-weight: 600;
+    color: #111;
+    line-height: 1.45;
+    margin-bottom: 0.5rem;
+  }
+
+  .pub-meta {
+    font-size: 0.95rem;
+    color: #555;
+    display: flex;
+    flex-wrap: wrap;
+    gap: 0.5rem;
+    align-items: center;
+  }
+
+  .pub-meta a {
+    color: #007bff;
+    text-decoration: none;
+    font-weight: 500;
+  }
+
+  .pub-meta a:hover {
+    text-decoration: underline;
+  }
+
+  .badge-pub {
+    display: inline-block;
+    background: #eaf3ff;
+    color: #0056b3;
+    border-radius: 999px;
+    padding: 0.2rem 0.65rem;
+    font-size: 0.82rem;
+    font-weight: 600;
+  }
+
+  @media (max-width: 767px) {
     .section-title {
-      font-size: 1.75rem;
-      color: #333;
-      margin-bottom: 1rem;
-      border-bottom: 2px solid #007bff;
-      /* Example accent color */
-      padding-bottom: 0.5rem;
-      display: inline-block;
+      font-size: 1.6rem;
+      display: block;
+      text-align: center;
     }
 
-    @media (max-width: 767px) {
-      .section-title {
-        font-size: 1.5rem;
-        display: block;
-        text-align: center;
-      }
+    .pub-year {
+      font-size: 1.2rem;
     }
 
-    /* Footer basic styling (consistent with About page) */
-    footer.sticky-bottom {
-      padding-top: 1rem;
-      padding-bottom: 1rem;
-      background-color: #f8f9fa;
-      /* Light background for footer */
-      font-size: 0.9rem;
-      border-top: 1px solid #e7e7e7;
+    .pub-item {
+      padding: 1rem;
     }
+  }
+</style>
 
-    /* Ensure publications list items have consistent styling if needed */
-    .bibliography li {
-      margin-bottom: 1.5rem;
-      /* More spacing between items */
-    }
+<section class="publications-section">
+  <h2 class="section-title">Publications</h2>
+  <p class="pub-subtitle">
+    <a href="https://scholar.google.com/citations?user=gvw7sG4AAAAJ&hl=en&oi=sra" target="_blank" rel="noopener noreferrer">
+      Google Scholar
+    </a>
+  </p>
 
-    .bibliography .title {
-      font-size: 1.1em;
-      /* Slightly larger title */
-    }
-
-    .bibliography .author,
-    .bibliography .venue {
-      font-size: 0.95em;
-    }
-  </style>
-</head>
-
-<body class="fixed-top-nav sticky-bottom-footer">
-  <header>
-    <nav id="navbar" class="navbar navbar-light navbar-expand-sm fixed-top bg-white shadow-sm">
-      <div class="container">
-        <a class="navbar-brand title font-weight-lighter" href="/">
-          <span class="font-weight-bold"> Raj</span> Kumar Paudel
-        </a>
-        <button class="navbar-toggler collapsed ml-auto" type="button" data-toggle="collapse" data-target="#navbarNav"
-          aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
-          <span class="sr-only">Toggle navigation</span>
-          <span class="icon-bar top-bar"></span>
-          <span class="icon-bar middle-bar"></span>
-          <span class="icon-bar bottom-bar"></span>
-        </button>
-        <div class="collapse navbar-collapse text-right" id="navbarNav">
-          <ul class="navbar-nav ml-auto flex-nowrap">
-            <li class="nav-item"><a class="nav-link" href="/">About</a></li>
-            <li class="nav-item active"><a class="nav-link" href="/publications/">Publications</a></li>
-            <li class="nav-item"><a class="nav-link" href="/research/">Research</a></li>
-            <li class="nav-item"><a class="nav-link" href="/Blog/">Blog</a></li>
-            <li class="nav-item"><a class="nav-link" href="/Outreach/">Outreach</a></li>
-          </ul>
-        </div>
+  <h3 class="pub-year">2026</h3>
+  <ul class="pub-list">
+    <li class="pub-item">
+      <div class="pub-authors">
+        <strong>Raj Kumar Paudel</strong>, Chung-Yuan Ren, Yia-Chung Chang
       </div>
-    </nav>
-  </header>
-
-  <div class="container mt-5 pt-5">
-    <div class="post">
-      <section class="publications-section">
-        <h2 class="section-title">Publications</h2>
-        <p>[<a href="https://scholar.google.com/citations?user=gvw7sG4AAAAJ&hl=en&oi=sra" target="_blank"
-            rel="noopener noreferrer">Google Scholar</a>]</p>
-
-<!-- Publications -->
-
-<h4 id="papers">Papers</h4>
-
-
-<!-- =========================================================
-     Publications 2026
-============================================================== -->
-
-<h4>Publications 2026</h4>
-
-<div class="publications-year h5 font-weight-bold mb-2">2026</div>
-
-<ol class="bibliography mb-5">
-
-
-<li class="mb-4">
-
-<div id="paudel2026sepm" class="col-sm-8 p-0">
-
-<div class="author text-muted">
-<strong>Raj Kumar Paudel</strong>, Chung-Yuan Ren, Yia-Chung Chang
-</div>
-
-<div class="title font-weight-medium">
-Semi-empirical Pseudopotential Method for Monolayer Transition-Metal Dichalcogenides
-</div>
-
-<div class="mt-1">
-<a href="https://doi.org/10.1016/j.cpc.2026.110240"
-target="_blank">
-<em>Computer Physics Communications</em> 327, 110240 (2026)
-</a>
-</div>
-
-</div>
-
-</li>
-
-
-
-<li class="mb-4">
-
-<div id="ouyang2026brightening" class="col-sm-8 p-0">
-
-<div class="author text-muted">
-
-Tianyi Ouyang, Erfu Liu, Soonyoung Cha, R Cang,
-<strong>Raj Kumar Paudel</strong>, Yiyang Sun, Zhaoran Xu,
-Takashi Taniguchi, Kenji Watanabe, Nathaniel M. Gabor,
-Yia-Chung Chang, Chun Hung Lui
-
-</div>
-
-
-<div class="title font-weight-medium">
-
-Brightening Interlayer Excitons by Electric-Field-Driven Hole Transfer in Bilayer WSe₂
-
-</div>
-
-
-<div class="mt-1">
-
-<a href="https://doi.org/10.1103/mjhj-83wc"
-target="_blank">
-
-<em>Physical Review Letters</em> 136 (9), 096903 (2026)
-
-</a>
-
-</div>
-
-
-</div>
-
-</li>
-
-
-
-
-<li class="mb-4">
-
-<div id="cha2026exciton" class="col-sm-8 p-0">
-
-
-<div class="author text-muted">
-
-Chun Hung Lui, Soonyoung Cha, Zhaoran Xu, Tianyi Ouyang,
-Hongyu Yao, <strong>Raj Kumar Paudel</strong>,
-Takashi Taniguchi, Kenji Watanabe, Andrew Y. Joe,
-Yia-Chung Chang, Nathaniel M. Gabor
-
-</div>
-
-
-
-<div class="title font-weight-medium">
-
-Hybridization-Revealed Interlayer 2p Exciton State in Bilayer MoS₂
-
-</div>
-
-
-
-<div class="mt-1">
-
-Accepted in <em>Nature Physics</em> (2026)
-
-</div>
-
-
-</div>
-
-</li>
-
-
-</ol>
-
-
-
-
-
-<!-- =========================================================
-     Previous Preprint Record
-     
-     This section is intentionally hidden.
-     These works were later published and are listed above.
-     Kept for historical reference.
-============================================================== -->
-
-
-<!--
-
-<h4 id="preprints">Preprints</h4>
-
-<div class="publications-year h5 font-weight-bold mb-2">2025</div>
-
-
-<ol class="bibliography mb-5">
-
-
-<li class="mb-4">
-
-
-<div class="col-sm-8 p-0">
-
-
-<div class="author text-muted">
-
-<strong>Raj Kumar Paudel</strong>, Chung-Yuan Ren, Yia-Chung Chang
-
-</div>
-
-
-<div class="title font-weight-medium">
-
-Semi-empirical Pseudopotential Method for Monolayer Transition-Metal Dichalcogenides
-
-</div>
-
-
-<div class="mt-1">
-
-<a href="https://arxiv.org/abs/2506.11360"
-target="_blank">
-
-arXiv:2506.11360
-
-</a>
-
-(2025)
-
-</div>
-
-
-</div>
-
-
-</li>
-
-
-</ol>
-
-
--->
-
-
-
-
-
-
-<!-- =========================================================
-     Publications 2023
-============================================================== -->
-
-
-<h4>Publications 2023</h4>
-
-
-<div class="publications-year h5 font-weight-bold mb-2">2023</div>
-
-
-<ol class="bibliography">
-
-
-
-
-
-<li class="mb-4">
-
-
-<div id="ren2023density" class="col-sm-8 p-0">
-
-
-<div class="author text-muted">
-
-Chung-Yuan Ren, <strong>Raj Kumar Paudel</strong>, Yia-Chung Chang
-
-</div>
-
-
-<div class="title font-weight-medium">
-
-Density Functional Theory for Buckyballs within Symmetrized Icosahedral Basis
-
-</div>
-
-
-
-<div class="mt-1">
-
-
-<em>Nanomaterials</em> 13 (13), 1912 (2023)
-
-|
-
-<a href="https://www.mdpi.com/2079-4991/13/13/1912"
-target="_blank">
-
-MDPI
-
-</a>
-
-
-</div>
-
-
-</div>
-
-
-</li>
-
-
-
-
-
-<li class="mb-4">
-
-
-<div id="paudel2023semi" class="col-sm-8 p-0">
-
-
-<div class="author text-muted">
-
-
-<strong>Raj Kumar Paudel</strong>, Chung-Yuan Ren, Yia-Chung Chang
-
-
-</div>
-
-
-
-<div class="title font-weight-medium">
-
-
-Semi-Empirical Pseudopotential Method for Graphene and Graphene Nanoribbons
-
-
-</div>
-
-
-
-<div class="mt-1">
-
-
-<em>Nanomaterials</em> 13 (14), 2066 (2023)
-
-
-|
-
-
-<a href="https://www.mdpi.com/2079-4991/13/14/2066"
-target="_blank">
-
-
-MDPI
-
-
-</a>
-
-
-</div>
-
-
-</div>
-
-
-</li>
-
-
-
-</ol>            
-        </article>
-    </div>
-  </div>
-
-  <!-- Footer -->
-  <footer class="sticky-bottom mt-5 py-3"> <!-- Matched footer style from About page -->
-    <div class="container text-center">
-      © <span id="currentYearFooter"></span> Raj Kumar Paudel. Powered by <a href="https://jekyllrb.com/"
-        target="_blank" rel="noopener noreferrer">Jekyll</a> and <a href="https://pages.github.com/" target="_blank"
-        rel="noopener noreferrer">GitHub Pages</a>.<br>
-      Last updated: <span id="lastUpdated"></span>.
-    </div>
-  </footer>
-
-  <script>
-    document.getElementById('lastUpdated').textContent = new Date().toLocaleDateString('en-US', {
-      year: 'numeric', month: 'long', day: 'numeric'
-    });
-    document.getElementById('currentYearFooter').textContent = new Date().getFullYear();
-  </script>
-
-  <!-- Local JS -->
-  <script src="/assets/js/jquery.min.js"></script>
-  <script src="/assets/js/popper.min.js"></script>
-  <script src="/assets/js/bootstrap.min.js"></script>
-  <script src="/assets/js/mdb.min.js"></script>
-  <!-- <script src="/assets/js/common.js"></script> --> <!-- Assuming common.js is needed, uncomment if so -->
-</body>
-
-</html>
+      <div class="pub-title">
+        Semi-empirical Pseudopotential Method for Monolayer Transition-Metal Dichalcogenides
+      </div>
+      <div class="pub-meta">
+        <span>Computer Physics Communications 327, 110240 (2026)</span>
+        <span class="badge-pub">Published</span>
+        <a href="https://doi.org/10.1016/j.cpc.2026.110240" target="_blank" rel="noopener noreferrer">DOI</a>
+      </div>
+    </li>
+
+    <li class="pub-item">
+      <div class="pub-authors">
+        Tianyi Ouyang, Erfu Liu, Soonyoung Cha, R Cang,
+        <strong>Raj Kumar Paudel</strong>, Yiyang Sun, Zhaoran Xu,
+        Takashi Taniguchi, Kenji Watanabe, Nathaniel M. Gabor,
+        Yia-Chung Chang, Chun Hung Lui
+      </div>
+      <div class="pub-title">
+        Brightening Interlayer Excitons by Electric-Field-Driven Hole Transfer in Bilayer WSe₂
+      </div>
+      <div class="pub-meta">
+        <span>Physical Review Letters 136 (9), 096903 (2026)</span>
+        <span class="badge-pub">Published</span>
+        <a href="https://doi.org/10.1103/mjhj-83wc" target="_blank" rel="noopener noreferrer">DOI</a>
+      </div>
+    </li>
+
+    <li class="pub-item">
+      <div class="pub-authors">
+        Chun Hung Lui, Soonyoung Cha, Zhaoran Xu, Tianyi Ouyang,
+        Hongyu Yao, <strong>Raj Kumar Paudel</strong>,
+        Takashi Taniguchi, Kenji Watanabe, Andrew Y. Joe,
+        Yia-Chung Chang, Nathaniel M. Gabor
+      </div>
+      <div class="pub-title">
+        Hybridization-Revealed Interlayer 2p Exciton State in Bilayer MoS₂
+      </div>
+      <div class="pub-meta">
+        <span>Nature Physics (Accepted, 2026)</span>
+        <span class="badge-pub">Accepted</span>
+      </div>
+    </li>
+  </ul>
+
+  <h3 class="pub-year">2023</h3>
+  <ul class="pub-list">
+    <li class="pub-item">
+      <div class="pub-authors">
+        Chung-Yuan Ren, <strong>Raj Kumar Paudel</strong>, Yia-Chung Chang
+      </div>
+      <div class="pub-title">
+        Density Functional Theory for Buckyballs within Symmetrized Icosahedral Basis
+      </div>
+      <div class="pub-meta">
+        <span>Nanomaterials 13 (13), 1912 (2023)</span>
+        <span class="badge-pub">Published</span>
+        <a href="https://www.mdpi.com/2079-4991/13/13/1912" target="_blank" rel="noopener noreferrer">MDPI</a>
+      </div>
+    </li>
+
+    <li class="pub-item">
+      <div class="pub-authors">
+        <strong>Raj Kumar Paudel</strong>, Chung-Yuan Ren, Yia-Chung Chang
+      </div>
+      <div class="pub-title">
+        Semi-Empirical Pseudopotential Method for Graphene and Graphene Nanoribbons
+      </div>
+      <div class="pub-meta">
+        <span>Nanomaterials 13 (14), 2066 (2023)</span>
+        <span class="badge-pub">Published</span>
+        <a href="https://www.mdpi.com/2079-4991/13/14/2066" target="_blank" rel="noopener noreferrer">MDPI</a>
+      </div>
+    </li>
+  </ul>
+</section>
